@@ -17,58 +17,53 @@ const calculatePoints = (purchaseTotal) => {
   }
 };
 
-class CustomerRow extends React.Component {
-  render() {
-    const customer = this.props.customer;
-    const dateRange = this.props.dateRange;
+function CustomerRow({customer, dateRange}) {
+  /* This creates a dynamic object of monthPoints with an arbitrary
+     range of months, so that the functionality of the app
+     could be expanded to include any user-defined range of months.
 
-    /* This creates a dynamic object of monthPoints with an arbitrary
-       range of months, so that the functionality of the app
-       could be expanded to include any user-defined range of months.
-
-       format:
-       monthPoints = {
-        monthAsNumber: pointTotal,
-        ...
-      }
-    */
-    const monthPoints = {};
-    for (let month of dateRange.months) {
-      monthPoints[month] = 0;
+     format:
+     monthPoints = {
+      monthAsNumber: pointTotal,
+      ...
     }
-
-    customer.transactions.forEach((transaction) => {
-      const transactionDate = parseDate(transaction.date);
-      const purchaseTotal = Math.floor(transaction.total);
-
-      if (purchaseTotal > 50 && transactionDate.unixTime >= dateRange.startTime
-        && transactionDate.unixTime <= dateRange.endTime) {
-        // transaction is in correct date range, and qualifies for points
-        let points = calculatePoints(purchaseTotal);
-        monthPoints[transactionDate.month] += points;
-      }
-    });
-
-    // calculate totalPoints from arbitrarily large monthPoints object
-    let totalPoints = Object.values(monthPoints).reduce((a, b) => a + b);
-
-    const monthCells = [];
-
-    dateRange.months.forEach((month) => {
-      monthCells.push(
-        <td key={month}>{monthPoints[month]}</td>
-      );
-    });
-
-    return (
-      <tr>
-        <td>{customer.ID}</td>
-        <td>{customer.name}</td>
-        {monthCells}
-        <td>{totalPoints}</td>
-      </tr>
-    );
+  */
+  const monthPoints = {};
+  for (let month of dateRange.months) {
+    monthPoints[month] = 0;
   }
+
+  customer.transactions.forEach((transaction) => {
+    const transactionDate = parseDate(transaction.date);
+    const purchaseTotal = Math.floor(transaction.total);
+
+    if (purchaseTotal > 50 && transactionDate.unixTime >= dateRange.startTime
+      && transactionDate.unixTime <= dateRange.endTime) {
+      // transaction is in correct date range, and qualifies for points
+      let points = calculatePoints(purchaseTotal);
+      monthPoints[transactionDate.month] += points;
+    }
+  });
+
+  // calculate totalPoints from arbitrarily large monthPoints object
+  let totalPoints = Object.values(monthPoints).reduce((a, b) => a + b);
+
+  const monthCells = [];
+
+  dateRange.months.forEach((month) => {
+    monthCells.push(
+      <td key={month}>{monthPoints[month]}</td>
+    );
+  });
+
+  return (
+    <tr>
+      <td>{customer.ID}</td>
+      <td>{customer.name}</td>
+      {monthCells}
+      <td>{totalPoints}</td>
+    </tr>
+  );
 }
 
 export default CustomerRow;
