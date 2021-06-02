@@ -2,7 +2,7 @@ import React from "react";
 
 function Search({
   onChange,
-  filterText
+  filterText = ""
 }) {
   return (
     <form>

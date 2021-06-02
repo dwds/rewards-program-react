@@ -2,11 +2,8 @@ import React, {useState} from "react";
 import CustomerTable from "./customerTable";
 import Search from "./search";
 
-function SearchableCustomerTable({
-  customers,
-  onChange,
-}) {
-  const [filterText, setFilterText] = useState(null);
+function SearchableCustomerTable({customers}) {
+  const [filterText, setFilterText] = useState("");
 
   function handleFilterTextChange(event){
     setFilterText(event.target.value);

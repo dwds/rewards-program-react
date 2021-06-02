@@ -3,10 +3,11 @@ import CustomerRow from "./customerRow";
 
 function CustomerTable({
   customers,
-  filterText,
+  dateRange,
+  filterText = "",
   locale = "en-US"
 }) {
-  const lowercaseFilterText = filterText.toLocaleLowerCase(locale);
+  const lowercaseFilterText = filterText?.toLocaleLowerCase(locale);
   const rows = [];
 
   customers.forEach((customer) => {
@@ -17,7 +18,7 @@ function CustomerTable({
     rows.push(
       <CustomerRow
         customer={customer}
-        dateRange={this.props.dateRange}
+        dateRange={dateRange}
         key={customer.ID} />
     );
   });
