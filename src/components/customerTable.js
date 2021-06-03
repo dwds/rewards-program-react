@@ -4,15 +4,15 @@ import CustomerRow from "./customerRow";
 function CustomerTable({
   customers,
   dateRange,
-  filterText = "",
+  searchFilter = "",
   locale = "en-US"
 }) {
-  const lowercaseFilterText = filterText?.toLocaleLowerCase(locale);
+  const lowercaseSearchFilter = searchFilter?.toLocaleLowerCase(locale);
   const rows = [];
 
   customers.forEach((customer) => {
-    if (customer.name.toLocaleLowerCase(locale).indexOf(lowercaseFilterText) === -1 &&
-        customer.ID.toLocaleLowerCase(locale).indexOf(lowercaseFilterText) === -1) {
+    if (customer.name.toLocaleLowerCase(locale).indexOf(lowercaseSearchFilter) === -1 &&
+        customer.ID.toLocaleLowerCase(locale).indexOf(lowercaseSearchFilter) === -1) {
       return;
     }
     rows.push(

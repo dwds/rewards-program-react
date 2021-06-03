@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import CustomerTable from "./customerTable";
-import Search from "./search";
+import SearchField from "./searchField";
 
 function SearchableCustomerTable({customers}) {
-  const [filterText, setFilterText] = useState("");
+  const [searchFilter, setSearchFilter] = useState("");
 
-  function handleFilterTextChange(event){
-    setFilterText(event.target.value);
+  function handleSearchFilterChange(event){
+    setSearchFilter(event.target.value);
   }
   const dateRange = {
     startDate: new Date(2019, 2),
@@ -20,11 +20,13 @@ function SearchableCustomerTable({customers}) {
 
   return (
       <React.Fragment>
-        <Search
-          filterText={filterText}
-          onChange={handleFilterTextChange} />
+        <SearchField
+          value={searchFilter}
+          label="Search for Customer"
+          placeholder="Customer name or ID…"
+          onChange={handleSearchFilterChange} />
         <CustomerTable
-          filterText={filterText}
+          searchFilter={searchFilter}
           customers={customers}
           dateRange={dateRange} />
       </React.Fragment>
