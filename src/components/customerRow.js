@@ -38,8 +38,8 @@ function getTransactionsWithinDateRange(minDate, maxDate, transactions) {
   })
 }
 
-function getEndOfMonth(month) {
-  return new Date(month.getFullYear(), month.getMonth() + 1, 0, 23, 59, 59, 999);
+function getEndOfMonth(date) {
+  return new Date(date.getFullYear(), date.getMonth() + 1, 0, 23, 59, 59, 999);
 }
 
 function CustomerRow({
