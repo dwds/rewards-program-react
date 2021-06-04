@@ -56,7 +56,7 @@ function CustomerTable({
       customer.name.toLowerCase().includes(searchFilter.toLowerCase())
       || customer.id.toLowerCase().includes(searchFilter.toLowerCase())
     )),
-    [customers]
+    [customers, searchFilter]
   );
 
   return (
