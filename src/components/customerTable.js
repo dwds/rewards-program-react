@@ -1,52 +1,84 @@
-import React from "react";
+import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
 import CustomerRow from "./customerRow";
 
+const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+function createArrayFromInclusiveRange(min, max) {
+  return Array.from(
+    {length: max - min + 1},
+    (value, index) => min + index
+  )
+}
+
+function getMonthsFromDateRange(startDate, endDate) {
+  if (startDate > endDate) return false;
+
+  const startYear = startDate.getFullYear();
+  const startMonth = startDate.getMonth();
+  const endYear = startDate.getFullYear();
+  const endMonth = endDate.getMonth();
+
+  if (startYear === endYear) {
+    return createArrayFromInclusiveRange(startMonth, endMonth);
+  }
+
+  const startYearMonths = createArrayFromInclusiveRange(startMonth, 11);
+  const endYearMonths = createArrayFromInclusiveRange(0, endMonth);
+  const fullYearMonths = [...Array(12).keys()];
+  const middleYearsMonths = Array(endYear - startYear - 1).fill(fullYearMonths).flat();
+
+  return startYearMonths.concat(middleYearsMonths, endYearMonths);
+}
+
 function CustomerTable({
   customers,
-  dateRange,
-  searchFilter = "",
-  locale = "en-US"
+  startDate,
+  endDate,
+  maximumMonths = 6,
+  searchFilter = ""
 }) {
-  const lowercaseSearchFilter = searchFilter?.toLocaleLowerCase(locale);
-  const rows = [];
+  const months = useMemo(
+    () => getMonthsFromDateRange(startDate, endDate).slice(0, maximumMonths - 1),
+    [startDate, endDate, maximumMonths]
+  );
 
-  customers.forEach((customer) => {
-    if (customer.name.toLocaleLowerCase(locale).indexOf(lowercaseSearchFilter) === -1 &&
-        customer.ID.toLocaleLowerCase(locale).indexOf(lowercaseSearchFilter) === -1) {
-      return;
-    }
-    rows.push(
-      <CustomerRow
-        customer={customer}
-        dateRange={dateRange}
-        key={customer.ID} />
-    );
-  });
+  const filteredCustomers = useMemo(
+    () => customers.filter(customer => (
+      customer.name.toLowerCase().includes(searchFilter.toLowerCase())
+      || customer.id.toLowerCase().includes(searchFilter.toLowerCase())
+    )),
+    [customers]
+  );
 
-  // TODO: Make month names dynamic
   return (
     <table className="pure-table pure-table-horizontal">
       <colgroup span="2"></colgroup>
-      <colgroup span="4"></colgroup>
+      <colgroup span={months.length + 1}></colgroup>
 
       <thead>
         <tr className="top-table-header">
           <th colSpan="2" scope="colgroup">Customer</th>
-          <th colSpan="4" scope="colgroup">Points Earned</th>
+          <th colSpan={months.length + 1} scope="colgroup">Points Earned</th>
         </tr>
         <tr className="second-table-header">
           <th scope="col">ID</th>
           <th scope="col">Name</th>
-          <th scope="col">March</th>
-          <th scope="col">April</th>
-          <th scope="col">May</th>
+          {months.map((month, index) => (
+            <td key={index}>{monthNames[month]}</td>
+          ))}
           <th scope="col">Total</th>
         </tr>
       </thead>
 
       <tbody>
-        {rows}
+        {filteredCustomers.map(customer => (
+          <CustomerRow
+            customer={customer}
+            startDate={startDate}
+            endDate={endDate}
+            key={customer.id} />
+        ))}
       </tbody>
     </table>
   );
@@ -61,10 +93,11 @@ CustomerTable.propTypes = {
       date: PropTypes.string,
       total: PropTypes.number
     }))
-  })),
-  dateRange: PropTypes.object,
+  })).isRequired,
+  startDate: PropTypes.instanceOf(Date).isRequired,
+  endDate: PropTypes.instanceOf(Date).isRequired,
+  maximumMonths: PropTypes.number,
   searchFilter: PropTypes.string,
-  locale: PropTypes.string,
 };
 
 export default CustomerTable;
