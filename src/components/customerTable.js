@@ -2,13 +2,12 @@ import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
 import CustomerRow from "./customerRow";
 
-const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-function createArrayFromInclusiveRange(min, max) {
+function createArrayFromRange(min, max, inclusive = true) {
+  const length = inclusive ? max - min + 1 : max - min - 1;
   return Array.from(
-    {length: max - min + 1},
-    (value, index) => min + index
-  )
+    {length: length},
+    (value, index) => inclusive ? min + index : min + index + 1
+  );
 }
 
 function getMonthsFromDateRange(startDate, endDate) {
@@ -20,13 +19,22 @@ function getMonthsFromDateRange(startDate, endDate) {
   const endMonth = endDate.getMonth();
 
   if (startYear === endYear) {
-    return createArrayFromInclusiveRange(startMonth, endMonth);
+    const monthsInRange = createArrayFromRange(startMonth, endMonth);
+    return monthsInRange.map(month => (
+      new Date(startYear, month)
+    ))
   }
 
-  const startYearMonths = createArrayFromInclusiveRange(startMonth, 11);
-  const endYearMonths = createArrayFromInclusiveRange(0, endMonth);
-  const fullYearMonths = [...Array(12).keys()];
-  const middleYearsMonths = Array(endYear - startYear - 1).fill(fullYearMonths).flat();
+  const startYearMonths = createArrayFromRange(startMonth, 11).map(month => new Date(startYear, month));
+
+  const middleYears = createArrayFromRange(startYear, endYear, false);
+  const middleYearsMonths = middleYears.map(middleYear => (
+    [...Array(12).keys()].map(month => (
+      new Date(middleYear, month)
+    ))
+  )).flat();
+
+  const endYearMonths = createArrayFromRange(0, endMonth).map(month => new Date(endYear, month));
 
   return startYearMonths.concat(middleYearsMonths, endYearMonths);
 }
@@ -64,8 +72,8 @@ function CustomerTable({
         <tr className="second-table-header">
           <th scope="col">ID</th>
           <th scope="col">Name</th>
-          {months.map((month, index) => (
-            <td key={index}>{monthNames[month]}</td>
+          {months.map((month) => (
+            <td key={month.toString()}>{month.toLocaleString("en-US", {month: "long"})}</td>
           ))}
           <th scope="col">Total</th>
         </tr>
@@ -77,6 +85,7 @@ function CustomerTable({
             customer={customer}
             startDate={startDate}
             endDate={endDate}
+            months={months}
             key={customer.id} />
         ))}
       </tbody>

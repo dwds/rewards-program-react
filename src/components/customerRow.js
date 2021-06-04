@@ -1,68 +1,76 @@
-import React from "react";
+import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
 
-const parseDate = (dateAsString) => {
-  const date = new Date(dateAsString);
-  return {
-    unixTime: date.getTime(),
-    month: date.getMonth()
-  }
-};
+function calculatePointsForPurchase(purchaseTotal, pointOptions = {}) {
+  const {
+    lowerPointValue = 1,
+    minimumValueForLowerPointValue = 50,
+    higherPointValue = 2,
+    minimumTotalForHigherPointValue = 100
+  } = pointOptions;
 
-// TODO: abstract point values
-const calculatePoints = (purchaseTotal) => {
-  if (purchaseTotal > 100) {
-    return (2 * (purchaseTotal - 100)) + 50;
-  } else {
-    return purchaseTotal - 50;
-  }
-};
-
-function CustomerRow({customer, dateRange}) {
-  /* This creates a dynamic object of monthPoints with an arbitrary
-     range of months, so that the functionality of the app
-     could be expanded to include any user-defined range of months.
-
-     format:
-     monthPoints = {
-      monthAsNumber: pointTotal,
-      ...
-    }
-  */
-  const monthPoints = {};
-  for (let month of dateRange.months) {
-    monthPoints[month] = 0;
-  }
-
-  customer.transactions.forEach((transaction) => {
-    const transactionDate = parseDate(transaction.date);
-    const purchaseTotal = Math.floor(transaction.total);
-
-    if (purchaseTotal > 50 && transactionDate.unixTime >= dateRange.startTime
-      && transactionDate.unixTime <= dateRange.endTime) {
-      // transaction is in correct date range, and qualifies for points
-      let points = calculatePoints(purchaseTotal);
-      monthPoints[transactionDate.month] += points;
-    }
-  });
-
-  // calculate totalPoints from arbitrarily large monthPoints object
-  let totalPoints = Object.values(monthPoints).reduce((a, b) => a + b);
-
-  const monthCells = [];
-
-  dateRange.months.forEach((month) => {
-    monthCells.push(
-      <td key={month}>{monthPoints[month]}</td>
+  if (purchaseTotal > minimumTotalForHigherPointValue) {
+    return (
+      (higherPointValue *
+        (purchaseTotal - minimumTotalForHigherPointValue)
+      ) +
+      (lowerPointValue *
+        (minimumTotalForHigherPointValue - minimumValueForLowerPointValue)
+      )
     );
-  });
+  } else if (purchaseTotal > minimumValueForLowerPointValue) {
+    return lowerPointValue * (purchaseTotal - minimumValueForLowerPointValue);
+  } else {
+    return 0;
+  }
+}
+
+function calculatePointTotal(transactions) {
+  const purchaseTotals = transactions.map(transaction => transaction.total);
+  const pointTotals = purchaseTotals.map(purchaseTotal => calculatePointsForPurchase(purchaseTotal));
+  return pointTotals.reduce((accumulator, value) => accumulator + value);
+}
+
+function getTransactionsWithinDateRange(minDate, maxDate, transactions) {
+  transactions.filter(transaction => {
+    const transactionDate = new Date(transaction.date);
+    return transactionDate >= minDate && transactionDate <= maxDate;
+  })
+}
+
+function getEndOfMonth(month) {
+  return new Date(month.getFullYear(), month.getMonth() + 1, 0, 23, 59, 59, 999);
+}
+
+function CustomerRow({
+  customer,
+  startDate,
+  endDate,
+  months
+}) {
+  const transactionsWithinStartAndEndDates = useMemo(
+    () => getTransactionsWithinDateRange(startDate, endDate, customer.transactions),
+    [customer.transactions]
+  );
+
+  const pointTotalForDateRange = useMemo(
+    () => calculatePointTotal(transactionsWithinStartAndEndDates),
+    [transactionsWithinStartAndEndDates]
+  );
 
   return (
     <tr>
       <td>{customer.id}</td>
       <td>{customer.name}</td>
-      {monthCells}
-      <td>{totalPoints}</td>
+      {months.map(month => {
+        const transactionsWithinMonth = getTransactionsWithinDateRange(month, getEndOfMonth(month), transactionsWithinStartAndEndDates);
+        return (
+          <td key={month.toString()}>
+            {calculatePointTotal(transactionsWithinMonth)}
+          </td>
+        )
+      })}
+      <td>{pointTotalForDateRange}</td>
     </tr>
   );
 }
@@ -76,10 +84,10 @@ CustomerRow.propTypes = {
       date: PropTypes.string,
       total: PropTypes.number
     }))
-  }),
-  dateRange: PropTypes.object,
-  searchFilter: PropTypes.string,
-  locale: PropTypes.string,
+  }).isRequired,
+  startDate: PropTypes.instanceOf(Date).isRequired,
+  endDate: PropTypes.instanceOf(Date).isRequired,
+  months: PropTypes.arrayOf(PropTypes.instanceOf(Date)).isRequired
 };
 
 export default CustomerRow;
