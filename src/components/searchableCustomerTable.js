@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import PropTypes from 'prop-types';
 import CustomerTable from "./customerTable";
 import SearchField from "./searchField";
 
@@ -32,5 +33,17 @@ function SearchableCustomerTable({customers}) {
       </React.Fragment>
   );
 }
+
+SearchableCustomerTable.propTypes = {
+  customers: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    transactions: PropTypes.arrayOf(PropTypes.shape({
+      transactionNumber: PropTypes.string,
+      date: PropTypes.string,
+      total: PropTypes.number
+    }))
+  }))
+};
 
 export default SearchableCustomerTable;

@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 function SearchField({
   id = "search",
   label = "Search",
+  onChange = null,
   placeholder = "Search…",
-  onChange,
   value = ""
 }) {
   return (
@@ -19,5 +20,13 @@ function SearchField({
     </>
   );
 }
+
+SearchField.propTypes = {
+  id: PropTypes.string,
+  label: PropTypes.string,
+  onChange: PropTypes.func,
+  placeholder: PropTypes.string,
+  value: PropTypes.string
+};
 
 export default SearchField;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const parseDate = (dateAsString) => {
   const date = new Date(dateAsString);
@@ -58,12 +59,27 @@ function CustomerRow({customer, dateRange}) {
 
   return (
     <tr>
-      <td>{customer.ID}</td>
+      <td>{customer.id}</td>
       <td>{customer.name}</td>
       {monthCells}
       <td>{totalPoints}</td>
     </tr>
   );
 }
+
+CustomerRow.propTypes = {
+  customer: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    transactions: PropTypes.arrayOf(PropTypes.shape({
+      transactionNumber: PropTypes.string,
+      date: PropTypes.string,
+      total: PropTypes.number
+    }))
+  }),
+  dateRange: PropTypes.object,
+  searchFilter: PropTypes.string,
+  locale: PropTypes.string,
+};
 
 export default CustomerRow;

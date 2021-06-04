@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import CustomerRow from "./customerRow";
 
 function CustomerTable({
@@ -50,5 +51,20 @@ function CustomerTable({
     </table>
   );
 }
+
+CustomerTable.propTypes = {
+  customers: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    transactions: PropTypes.arrayOf(PropTypes.shape({
+      transactionNumber: PropTypes.string,
+      date: PropTypes.string,
+      total: PropTypes.number
+    }))
+  })),
+  dateRange: PropTypes.object,
+  searchFilter: PropTypes.string,
+  locale: PropTypes.string,
+};
 
 export default CustomerTable;
