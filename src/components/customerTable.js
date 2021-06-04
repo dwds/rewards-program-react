@@ -73,7 +73,9 @@ function CustomerTable({
           <th scope="col">ID</th>
           <th scope="col">Name</th>
           {months.map((month) => (
-            <td key={month.toString()}>{month.toLocaleString("en-US", {month: "long"})}</td>
+            <td key={month.toString()}>
+              {month.toLocaleString("en-US", {month: "long"})}
+            </td>
           ))}
           <th scope="col">Total</th>
         </tr>

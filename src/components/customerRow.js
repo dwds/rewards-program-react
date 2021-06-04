@@ -9,17 +9,19 @@ function calculatePointsForPurchase(purchaseTotal, pointOptions = {}) {
     minimumTotalForHigherPointValue = 100
   } = pointOptions;
 
-  if (purchaseTotal > minimumTotalForHigherPointValue) {
+  const wholeDollarTotal = Math.floor(purchaseTotal);
+
+  if (wholeDollarTotal > minimumTotalForHigherPointValue) {
     return (
       (higherPointValue *
-        (purchaseTotal - minimumTotalForHigherPointValue)
+        (wholeDollarTotal - minimumTotalForHigherPointValue)
       ) +
       (lowerPointValue *
         (minimumTotalForHigherPointValue - minimumValueForLowerPointValue)
       )
     );
-  } else if (purchaseTotal > minimumValueForLowerPointValue) {
-    return lowerPointValue * (purchaseTotal - minimumValueForLowerPointValue);
+  } else if (wholeDollarTotal > minimumValueForLowerPointValue) {
+    return lowerPointValue * (wholeDollarTotal - minimumValueForLowerPointValue);
   } else {
     return 0;
   }
@@ -28,11 +30,11 @@ function calculatePointsForPurchase(purchaseTotal, pointOptions = {}) {
 function calculatePointTotal(transactions) {
   const purchaseTotals = transactions.map(transaction => transaction.total);
   const pointTotals = purchaseTotals.map(purchaseTotal => calculatePointsForPurchase(purchaseTotal));
-  return pointTotals.reduce((accumulator, value) => accumulator + value);
+  return pointTotals.reduce((accumulator, value) => accumulator + value, 0);
 }
 
 function getTransactionsWithinDateRange(minDate, maxDate, transactions) {
-  transactions.filter(transaction => {
+  return transactions.filter(transaction => {
     const transactionDate = new Date(transaction.date);
     return transactionDate >= minDate && transactionDate <= maxDate;
   })
