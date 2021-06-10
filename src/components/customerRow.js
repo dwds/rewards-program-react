@@ -22,9 +22,8 @@ function calculatePointsForPurchase(purchaseTotal, pointOptions = {}) {
     );
   } else if (wholeDollarTotal > minimumValueForLowerPointValue) {
     return lowerPointValue * (wholeDollarTotal - minimumValueForLowerPointValue);
-  } else {
-    return 0;
   }
+  return 0;
 }
 
 function calculatePointTotal(transactions) {
