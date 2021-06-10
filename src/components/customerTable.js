@@ -2,7 +2,7 @@ import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
 import CustomerRow from "./customerRow";
 
-function createArrayFromRange(min, max, inclusive = true) {
+function createArrayOfNumbersFromRange(min, max, inclusive = true) {
   const length = inclusive ? max - min + 1 : max - min - 1;
   return Array.from(
     {length: length},
@@ -19,22 +19,22 @@ function getMonthsFromDateRange(startDate, endDate) {
   const endMonth = endDate.getMonth();
 
   if (startYear === endYear) {
-    const monthsInRange = createArrayFromRange(startMonth, endMonth);
+    const monthsInRange = createArrayOfNumbersFromRange(startMonth, endMonth);
     return monthsInRange.map(month => (
       new Date(startYear, month)
     ))
   }
 
-  const startYearMonths = createArrayFromRange(startMonth, 11).map(month => new Date(startYear, month));
+  const startYearMonths = createArrayOfNumbersFromRange(startMonth, 11).map(month => new Date(startYear, month));
 
-  const middleYears = createArrayFromRange(startYear, endYear, false);
+  const middleYears = createArrayOfNumbersFromRange(startYear, endYear, false);
   const middleYearsMonths = middleYears.map(middleYear => (
     [...Array(12).keys()].map(month => (
       new Date(middleYear, month)
     ))
   )).flat();
 
-  const endYearMonths = createArrayFromRange(0, endMonth).map(month => new Date(endYear, month));
+  const endYearMonths = createArrayOfNumbersFromRange(0, endMonth).map(month => new Date(endYear, month));
 
   return startYearMonths.concat(middleYearsMonths, endYearMonths);
 }
@@ -43,20 +43,11 @@ function CustomerTable({
   customers,
   startDate,
   endDate,
-  maximumMonths = 6,
-  searchFilter = ""
+  maximumMonths = 6
 }) {
   const months = useMemo(
     () => getMonthsFromDateRange(startDate, endDate).slice(0, maximumMonths - 1),
     [startDate, endDate, maximumMonths]
-  );
-
-  const filteredCustomers = useMemo(
-    () => customers.filter(customer => (
-      customer.name.toLowerCase().includes(searchFilter.toLowerCase())
-      || customer.id.toLowerCase().includes(searchFilter.toLowerCase())
-    )),
-    [customers, searchFilter]
   );
 
   return (
@@ -82,7 +73,7 @@ function CustomerTable({
       </thead>
 
       <tbody>
-        {filteredCustomers.map(customer => (
+        {customers.map(customer => (
           <CustomerRow
             customer={customer}
             startDate={startDate}
@@ -107,8 +98,7 @@ CustomerTable.propTypes = {
   })).isRequired,
   startDate: PropTypes.instanceOf(Date).isRequired,
   endDate: PropTypes.instanceOf(Date).isRequired,
-  maximumMonths: PropTypes.number,
-  searchFilter: PropTypes.string,
+  maximumMonths: PropTypes.number
 };
 
 export default CustomerTable;

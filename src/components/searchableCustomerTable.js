@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 import PropTypes from 'prop-types';
 import CustomerTable from "./customerTable";
 import SearchField from "./searchField";
@@ -14,6 +14,14 @@ function SearchableCustomerTable({
     setSearchFilter(event.target.value);
   }
 
+  const filteredCustomers = useMemo(
+    () => customers.filter(customer => (
+      customer.name.toLowerCase().includes(searchFilter.toLowerCase())
+      || customer.id.toLowerCase().includes(searchFilter.toLowerCase())
+    )),
+    [customers, searchFilter]
+  );
+
   return (
       <>
         <SearchField
@@ -22,8 +30,7 @@ function SearchableCustomerTable({
           placeholder="Customer name or ID…"
           onChange={handleSearchFilterChange} />
         <CustomerTable
-          searchFilter={searchFilter}
-          customers={customers}
+          customers={filteredCustomers}
           startDate={startDate}
           endDate={endDate} />
       </>
