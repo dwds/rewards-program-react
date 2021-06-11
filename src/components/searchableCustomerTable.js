@@ -3,26 +3,21 @@ import PropTypes from 'prop-types';
 import CustomerTable from "./customerTable";
 import SearchField from "./searchField";
 
-function getCurrentDateWithMonthOffsetAsHTMLValue(monthOffset = 0) {
-  const date = new Date();
-  date.setMonth(date.getMonth() + monthOffset);
-  return date.toISOString().slice(0, 10); // "YYYY-MM-DD"
+function getEarliestTransactionDate(customers) {
+  return customers.flatMap(customer => (
+    customer.transactions.map(transaction => (
+      transaction.date
+    ))
+  )).reduce((earliestDateSoFar, date) => date < earliestDateSoFar ? date : earliestDateSoFar);
 }
 
 function SearchableCustomerTable({customers}) {
   const [inputValues, setInputValues] = useState({
     searchFilter: "",
-    startDate: getCurrentDateWithMonthOffsetAsHTMLValue(-2),
-    endDate: getCurrentDateWithMonthOffsetAsHTMLValue(0)
+    startDate: getEarliestTransactionDate(customers).slice(0, 10),
+    endDate: ""
   });
-
-  const handleChange = inputName => event => {
-    setInputValues({
-      ...inputValues,
-      [inputName]: event.target.value
-    })
-  }
-
+  
   const filteredCustomers = useMemo(
     () => customers.filter(customer => (
       customer.name.toLowerCase().includes(inputValues.searchFilter.toLowerCase())
@@ -30,6 +25,13 @@ function SearchableCustomerTable({customers}) {
     )),
     [customers, inputValues.searchFilter]
   );
+
+  const handleChange = inputName => event => {
+    setInputValues({
+      ...inputValues,
+      [inputName]: event.target.value
+    })
+  }
 
   return (
       <>
