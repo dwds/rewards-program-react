@@ -29,7 +29,7 @@ function calculatePointsForPurchase(purchaseTotal, pointOptions = {}) {
 function calculatePointTotal(transactions) {
   const purchaseTotals = transactions.map(transaction => transaction.total);
   const pointTotals = purchaseTotals.map(purchaseTotal => calculatePointsForPurchase(purchaseTotal));
-  return pointTotals.reduce((accumulator, value) => accumulator + value, 0);
+  return pointTotals.reduce((sumSoFar, pointTotal) => sumSoFar + pointTotal, 0);
 }
 
 function getTransactionsWithinDateRange(minDate, maxDate, transactions) {
