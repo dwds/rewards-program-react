@@ -3,36 +3,67 @@ import PropTypes from 'prop-types';
 import CustomerTable from "./customerTable";
 import SearchField from "./searchField";
 
-function SearchableCustomerTable({
-  customers,
-  startDate,
-  endDate
-}) {
-  const [searchFilter, setSearchFilter] = useState("");
+function getCurrentDateWithMonthOffsetAsHTMLValue(monthOffset = 0) {
+  const date = new Date();
+  date.setMonth(date.getMonth() + monthOffset);
+  return date.toISOString().slice(0, 10); // "YYYY-MM-DD"
+}
 
-  function handleSearchFilterChange(event){
-    setSearchFilter(event.target.value);
+function SearchableCustomerTable({customers}) {
+  const [inputValues, setInputValues] = useState({
+    searchFilter: "",
+    startDate: getCurrentDateWithMonthOffsetAsHTMLValue(-2),
+    endDate: getCurrentDateWithMonthOffsetAsHTMLValue(0)
+  });
+
+  const handleChange = inputName => event => {
+    setInputValues({
+      ...inputValues,
+      [inputName]: event.target.value
+    })
   }
 
   const filteredCustomers = useMemo(
     () => customers.filter(customer => (
-      customer.name.toLowerCase().includes(searchFilter.toLowerCase())
-      || customer.id.toLowerCase().includes(searchFilter.toLowerCase())
+      customer.name.toLowerCase().includes(inputValues.searchFilter.toLowerCase())
+      || customer.id.toLowerCase().includes(inputValues.searchFilter.toLowerCase())
     )),
-    [customers, searchFilter]
+    [customers, inputValues.searchFilter]
   );
 
   return (
       <>
         <SearchField
-          value={searchFilter}
+          value={inputValues.searchFilter}
           label="Search for Customer"
           placeholder="Customer name or ID…"
-          onChange={handleSearchFilterChange} />
+          onChange={handleChange("searchFilter")} />
+        <div>
+          <label>
+            Start Date:
+            <input
+              type="date"
+              max={inputValues.endDate}
+              value={inputValues.startDate}
+              onChange={handleChange("startDate")}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            End Date:
+            <input
+              type="date"
+              min={inputValues.startDate}
+              value={inputValues.endDate}
+              onChange={handleChange("endDate")}
+            />
+          </label>
+        </div>
         <CustomerTable
           customers={filteredCustomers}
-          startDate={startDate}
-          endDate={endDate} />
+          startDate={new Date(inputValues.startDate)}
+          endDate={new Date(inputValues.endDate)} />
       </>
   );
 }
@@ -46,9 +77,7 @@ SearchableCustomerTable.propTypes = {
       date: PropTypes.string,
       total: PropTypes.number
     }))
-  })),
-  startDate: PropTypes.instanceOf(Date),
-  endDate: PropTypes.instanceOf(Date)
+  }))
 };
 
 export default SearchableCustomerTable;

@@ -40,7 +40,7 @@ function getTransactionsWithinDateRange(minDate, maxDate, transactions) {
 }
 
 function getEndOfMonth(date) {
-  return new Date(date.getFullYear(), date.getMonth() + 1, 0, 23, 59, 59, 999);
+  return new Date(date.getUTCFullYear(), date.getUTCMonth() + 1, 0, 23, 59, 59, 999);
 }
 
 function CustomerRow({
@@ -51,7 +51,7 @@ function CustomerRow({
 }) {
   const transactionsWithinStartAndEndDates = useMemo(
     () => getTransactionsWithinDateRange(startDate, endDate, customer.transactions),
-    [customer.transactions]
+    [customer.transactions, startDate, endDate]
   );
 
   const pointTotalForDateRange = useMemo(

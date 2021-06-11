@@ -11,12 +11,15 @@ function createArrayOfNumbersFromRange(min, max, inclusive = true) {
 }
 
 function getMonthsFromDateRange(startDate, endDate) {
-  if (startDate > endDate) return false;
+  if ((startDate > endDate) || (isNaN(startDate) && isNaN(endDate))) return [];
 
-  const startYear = startDate.getFullYear();
-  const startMonth = startDate.getMonth();
-  const endYear = startDate.getFullYear();
-  const endMonth = endDate.getMonth();
+  const startYear = startDate.getUTCFullYear();
+  const startMonth = startDate.getUTCMonth();
+  const endYear = endDate.getUTCFullYear();
+  const endMonth = endDate.getUTCMonth();
+
+  if (isNaN(startDate)) return [new Date(endYear, endMonth)];
+  if (isNaN(endDate)) return [new Date(startYear, startMonth)];
 
   if (startYear === endYear) {
     const monthsInRange = createArrayOfNumbersFromRange(startMonth, endMonth);
@@ -42,12 +45,11 @@ function getMonthsFromDateRange(startDate, endDate) {
 function CustomerTable({
   customers,
   startDate,
-  endDate,
-  maximumMonths = 6
+  endDate
 }) {
   const months = useMemo(
-    () => getMonthsFromDateRange(startDate, endDate).slice(0, maximumMonths - 1),
-    [startDate, endDate, maximumMonths]
+    () => getMonthsFromDateRange(startDate, endDate).slice(0, 4),
+    [startDate, endDate]
   );
 
   return (
@@ -64,9 +66,9 @@ function CustomerTable({
           <th scope="col">ID</th>
           <th scope="col">Name</th>
           {months.map((month) => (
-            <td key={month.toString()}>
+            <th key={month.toString()}>
               {month.toLocaleString("en-US", {month: "long"})}
-            </td>
+            </th>
           ))}
           <th scope="col">Total</th>
         </tr>
@@ -97,8 +99,7 @@ CustomerTable.propTypes = {
     }))
   })).isRequired,
   startDate: PropTypes.instanceOf(Date).isRequired,
-  endDate: PropTypes.instanceOf(Date).isRequired,
-  maximumMonths: PropTypes.number
+  endDate: PropTypes.instanceOf(Date).isRequired
 };
 
 export default CustomerTable;
