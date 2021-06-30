@@ -42,8 +42,7 @@ function SearchableCustomerTable({
           value={inputValues.searchFilter}
           label="Search for Customer"
           placeholder="Customer name or ID…"
-          onChange={handleChange("searchFilter")}
-        />
+          onChange={handleChange("searchFilter")} />
         <div>
           <label>
             Number of Months:
@@ -52,8 +51,7 @@ function SearchableCustomerTable({
               min={1}
               max={maximumMonths}
               value={inputValues.numberOfMonths}
-              onChange={handleChange("numberOfMonths")}
-            />
+              onChange={handleChange("numberOfMonths")} />
           </label>
         </div>
         <div>
@@ -63,8 +61,7 @@ function SearchableCustomerTable({
               type="date"
               max={inputValues.endDate}
               value={inputValues.startDate}
-              onChange={handleChange("startDate")}
-            />
+              onChange={handleChange("startDate")} />
           </label>
         </div>
 
