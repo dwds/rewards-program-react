@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from "react";
 import PropTypes from 'prop-types';
-import CustomerTable from "./customerTable";
-import SearchField from "./searchField";
+import {CustomerTable} from "../customerTable";
+import {SearchField} from "../searchField";
 
 function getEarliestTransactionDate(customers) {
   return customers.flatMap(customer => (

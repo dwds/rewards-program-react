@@ -1,5 +1,5 @@
 import React from "react";
-import SearchableCustomerTable from "./components/searchableCustomerTable";
+import {SearchableCustomerTable} from "./components/searchableCustomerTable";
 import {customers} from "./data/customerTransactions";
 
 function App() {

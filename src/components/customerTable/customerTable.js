@@ -1,6 +1,6 @@
 import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
-import CustomerRow from "./customerRow";
+import {CustomerRow} from "../customerRow";
 
 function getMonthsArray(startMonth, numberOfMonths) {
   let monthsArray = [];
