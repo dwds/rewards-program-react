@@ -18,7 +18,7 @@ function SearchableCustomerTable({
   const [inputValues, setInputValues] = useState({
     searchFilter: "",
     startDate: getEarliestTransactionDate(customers).slice(0, 10),
-    numberOfMonths: 3
+    numberOfMonths: Math.round(maximumMonths / 2)
   });
 
   const filteredCustomers = useMemo(
@@ -42,18 +42,8 @@ function SearchableCustomerTable({
           value={inputValues.searchFilter}
           label="Search for Customer"
           placeholder="Customer name or ID…"
-          onChange={handleChange("searchFilter")} />
-        <div>
-          <label>
-            Start Month:
-            <input
-              type="date"
-              max={inputValues.endDate}
-              value={inputValues.startDate}
-              onChange={handleChange("startDate")}
-            />
-          </label>
-        </div>
+          onChange={handleChange("searchFilter")}
+        />
         <div>
           <label>
             Number of Months:
@@ -66,10 +56,22 @@ function SearchableCustomerTable({
             />
           </label>
         </div>
+        <div>
+          <label>
+            Start Month:
+            <input
+              type="date"
+              max={inputValues.endDate}
+              value={inputValues.startDate}
+              onChange={handleChange("startDate")}
+            />
+          </label>
+        </div>
+
         <CustomerTable
           customers={filteredCustomers}
           startMonth={new Date(inputValues.startDate)}
-          numberOfMonths={inputValues.maximumMonths} />
+          numberOfMonths={inputValues.numberOfMonths} />
       </>
   );
 }
