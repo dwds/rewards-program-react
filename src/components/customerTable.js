@@ -2,54 +2,22 @@ import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
 import CustomerRow from "./customerRow";
 
-function createArrayOfNumbersFromRange(min, max, inclusive = true) {
-  const length = inclusive ? max - min + 1 : max - min - 1;
-  return Array.from(
-    {length: length},
-    (value, index) => inclusive ? min + index : min + index + 1
-  );
-}
-
-function getMonthsFromDateRange(startDate, endDate) {
-  if ((startDate > endDate) || (isNaN(startDate) && isNaN(endDate))) return [];
-
-  const startYear = startDate.getUTCFullYear();
-  const startMonth = startDate.getUTCMonth();
-  const endYear = endDate.getUTCFullYear();
-  const endMonth = endDate.getUTCMonth();
-
-  if (isNaN(startDate)) return [new Date(endYear, endMonth)];
-  if (isNaN(endDate)) return [new Date(startYear, startMonth)];
-
-  if (startYear === endYear) {
-    const monthsInRange = createArrayOfNumbersFromRange(startMonth, endMonth);
-    return monthsInRange.map(month => (
-      new Date(startYear, month)
-    ))
+function getMonthsArray(startMonth, numberOfMonths) {
+  let monthsArray = [];
+  for(let monthIterator = 0; monthIterator < numberOfMonths; monthIterator++) {
+    monthsArray.push(new Date(startMonth.getUTCFullYear(), startMonth.getUTCMonth() + monthIterator));
   }
-
-  const startYearMonths = createArrayOfNumbersFromRange(startMonth, 11).map(month => new Date(startYear, month));
-
-  const middleYears = createArrayOfNumbersFromRange(startYear, endYear, false);
-  const middleYearsMonths = middleYears.map(middleYear => (
-    [...Array(12).keys()].map(month => (
-      new Date(middleYear, month)
-    ))
-  )).flat();
-
-  const endYearMonths = createArrayOfNumbersFromRange(0, endMonth).map(month => new Date(endYear, month));
-
-  return startYearMonths.concat(middleYearsMonths, endYearMonths);
+  return monthsArray;
 }
 
 function CustomerTable({
   customers,
-  startDate,
-  endDate
+  startMonth,
+  numberOfMonths = 3
 }) {
   const months = useMemo(
-    () => getMonthsFromDateRange(startDate, endDate).slice(0, 4),
-    [startDate, endDate]
+    () => getMonthsArray(startMonth, numberOfMonths),
+    [startMonth, numberOfMonths]
   );
 
   return (
@@ -78,8 +46,6 @@ function CustomerTable({
         {customers.map(customer => (
           <CustomerRow
             customer={customer}
-            startDate={startDate}
-            endDate={endDate}
             months={months}
             key={customer.id} />
         ))}
@@ -98,8 +64,8 @@ CustomerTable.propTypes = {
       total: PropTypes.number
     }))
   })).isRequired,
-  startDate: PropTypes.instanceOf(Date).isRequired,
-  endDate: PropTypes.instanceOf(Date).isRequired
+  startMonth: PropTypes.instanceOf(Date).isRequired,
+  numberOfMonths: PropTypes.number
 };
 
 export default CustomerTable;

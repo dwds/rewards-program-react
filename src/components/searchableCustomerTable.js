@@ -11,13 +11,16 @@ function getEarliestTransactionDate(customers) {
   )).reduce((earliestDateSoFar, date) => date < earliestDateSoFar ? date : earliestDateSoFar);
 }
 
-function SearchableCustomerTable({customers}) {
+function SearchableCustomerTable({
+  customers,
+  maximumMonths = 6
+}) {
   const [inputValues, setInputValues] = useState({
     searchFilter: "",
     startDate: getEarliestTransactionDate(customers).slice(0, 10),
-    endDate: ""
+    numberOfMonths: 3
   });
-  
+
   const filteredCustomers = useMemo(
     () => customers.filter(customer => (
       customer.name.toLowerCase().includes(inputValues.searchFilter.toLowerCase())
@@ -42,7 +45,7 @@ function SearchableCustomerTable({customers}) {
           onChange={handleChange("searchFilter")} />
         <div>
           <label>
-            Start Date:
+            Start Month:
             <input
               type="date"
               max={inputValues.endDate}
@@ -53,19 +56,20 @@ function SearchableCustomerTable({customers}) {
         </div>
         <div>
           <label>
-            End Date:
+            Number of Months:
             <input
-              type="date"
-              min={inputValues.startDate}
-              value={inputValues.endDate}
-              onChange={handleChange("endDate")}
+              type="number"
+              min={1}
+              max={maximumMonths}
+              value={inputValues.numberOfMonths}
+              onChange={handleChange("numberOfMonths")}
             />
           </label>
         </div>
         <CustomerTable
           customers={filteredCustomers}
-          startDate={new Date(inputValues.startDate)}
-          endDate={new Date(inputValues.endDate)} />
+          startMonth={new Date(inputValues.startDate)}
+          numberOfMonths={inputValues.maximumMonths} />
       </>
   );
 }
@@ -79,7 +83,8 @@ SearchableCustomerTable.propTypes = {
       date: PropTypes.string,
       total: PropTypes.number
     }))
-  }))
+  })).isRequired,
+  maximumMonths: PropTypes.number
 };
 
 export default SearchableCustomerTable;

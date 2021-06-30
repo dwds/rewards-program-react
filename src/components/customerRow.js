@@ -1,7 +1,7 @@
 import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
 
-function calculatePointsForPurchase(purchaseTotal, pointOptions = {}) {
+function calculatePointValueOfPurchase(purchaseTotal, pointOptions = {}) {
   const {
     lowerPointValue = 1,
     minimumValueForLowerPointValue = 50,
@@ -28,7 +28,7 @@ function calculatePointsForPurchase(purchaseTotal, pointOptions = {}) {
 
 function calculatePointTotal(transactions) {
   const purchaseTotals = transactions.map(transaction => transaction.total);
-  const pointTotals = purchaseTotals.map(purchaseTotal => calculatePointsForPurchase(purchaseTotal));
+  const pointTotals = purchaseTotals.map(purchaseTotal => calculatePointValueOfPurchase(purchaseTotal));
   return pointTotals.reduce((sumSoFar, pointTotal) => sumSoFar + pointTotal, 0);
 }
 
@@ -45,18 +45,16 @@ function getEndOfMonth(date) {
 
 function CustomerRow({
   customer,
-  startDate,
-  endDate,
   months
 }) {
-  const transactionsWithinStartAndEndDates = useMemo(
-    () => getTransactionsWithinDateRange(startDate, endDate, customer.transactions),
-    [customer.transactions, startDate, endDate]
+  const transactionsWithinStartAndEndMonths = useMemo(
+    () => getTransactionsWithinDateRange(months[0], getEndOfMonth(months[months.length - 1]), customer.transactions),
+    [customer.transactions, months]
   );
 
   const pointTotalForDateRange = useMemo(
-    () => calculatePointTotal(transactionsWithinStartAndEndDates),
-    [transactionsWithinStartAndEndDates]
+    () => calculatePointTotal(transactionsWithinStartAndEndMonths),
+    [transactionsWithinStartAndEndMonths]
   );
 
   return (
@@ -64,9 +62,9 @@ function CustomerRow({
       <td>{customer.id}</td>
       <td>{customer.name}</td>
       {months.map(month => {
-        const transactionsWithinMonth = getTransactionsWithinDateRange(month, getEndOfMonth(month), transactionsWithinStartAndEndDates);
+        const transactionsWithinMonth = getTransactionsWithinDateRange(month, getEndOfMonth(month), transactionsWithinStartAndEndMonths);
         return (
-          <td key={month.toString()}>
+          <td key={month.toISOString()}>
             {calculatePointTotal(transactionsWithinMonth)}
           </td>
         )
@@ -86,8 +84,6 @@ CustomerRow.propTypes = {
       total: PropTypes.number
     }))
   }).isRequired,
-  startDate: PropTypes.instanceOf(Date).isRequired,
-  endDate: PropTypes.instanceOf(Date).isRequired,
   months: PropTypes.arrayOf(PropTypes.instanceOf(Date)).isRequired
 };
 
