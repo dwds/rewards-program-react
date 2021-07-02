@@ -38,7 +38,7 @@ function SearchableCustomerTable({
   }
 
   return (
-      <>
+      <div>
         <SearchField
           value={inputValues.searchFilter}
           label="Search for Customer"
@@ -70,7 +70,7 @@ function SearchableCustomerTable({
           customers={filteredCustomers}
           startMonth={new Date(inputValues.startDate)}
           numberOfMonths={inputValues.numberOfMonths} />
-      </>
+      </div>
   );
 }
 
