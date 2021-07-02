@@ -1,5 +1,6 @@
 import React, {useMemo, useState} from "react";
 import PropTypes from 'prop-types';
+// import styles from './searchableCustomerTable.module.css';
 import {CustomerTable} from "../customerTable";
 import {SearchField} from "../searchField";
 

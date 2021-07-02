@@ -1,5 +1,6 @@
 import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
+// import styles from './customerRow.module.css';
 
 function calculatePointValueOfPurchase(purchaseTotal, pointOptions = {}) {
   const {

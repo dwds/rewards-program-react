@@ -1,5 +1,6 @@
 import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
+// import styles from './customerTable.module.css';
 import {CustomerRow} from "../customerRow";
 
 function getMonthsArray(startMonth, numberOfMonths) {
