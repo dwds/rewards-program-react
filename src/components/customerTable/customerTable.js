@@ -1,6 +1,6 @@
 import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
-// import styles from './customerTable.module.css';
+import styles from './customerTable.module.css';
 import {CustomerRow} from "../customerRow";
 
 function getMonthsArray(startMonth, numberOfMonths) {
@@ -22,24 +22,24 @@ function CustomerTable({
   );
 
   return (
-    <table className="pure-table pure-table-horizontal">
+    <table className={styles.root}>
       <colgroup span="2"></colgroup>
       <colgroup span={months.length + 1}></colgroup>
 
       <thead>
-        <tr className="top-table-header">
+        <tr>
           <th colSpan="2" scope="colgroup">Customer</th>
           <th colSpan={months.length + 1} scope="colgroup">Points Earned</th>
         </tr>
-        <tr className="second-table-header">
+        <tr>
           <th scope="col">ID</th>
           <th scope="col">Name</th>
           {months.map((month) => (
-            <th key={month.toString()}>
-              {month.toLocaleString("en-US", {month: "long"})}
+            <th className={styles.pointsLabel} key={month.toString()}>
+              {month.toLocaleString("en-US", {month: "short"})}
             </th>
           ))}
-          <th scope="col">Total</th>
+          <th className={styles.pointsLabel} scope="col">Total</th>
         </tr>
       </thead>
 

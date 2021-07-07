@@ -1,6 +1,6 @@
 import React, {useMemo} from "react";
 import PropTypes from 'prop-types';
-// import styles from './customerRow.module.css';
+import styles from './customerRow.module.css';
 
 function calculatePointValueOfPurchase(purchaseTotal, pointOptions = {}) {
   const {
@@ -59,18 +59,18 @@ function CustomerRow({
   );
 
   return (
-    <tr>
+    <tr className={styles.root}>
       <td>{customer.id}</td>
       <td>{customer.name}</td>
       {months.map(month => {
         const transactionsWithinMonth = getTransactionsWithinDateRange(month, getEndOfMonth(month), transactionsWithinStartAndEndMonths);
         return (
-          <td key={month.toISOString()}>
+          <td className={styles.points} key={month.toISOString()}>
             {calculatePointTotal(transactionsWithinMonth)}
           </td>
         )
       })}
-      <td>{pointTotalForDateRange}</td>
+      <td className={styles.points}>{pointTotalForDateRange}</td>
     </tr>
   );
 }
