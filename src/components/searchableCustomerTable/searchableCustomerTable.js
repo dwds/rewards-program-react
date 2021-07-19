@@ -1,9 +1,11 @@
 import React, {useMemo, useState} from "react";
 import PropTypes from 'prop-types';
-// import styles from './searchableCustomerTable.module.css';
+import styles from './searchableCustomerTable.module.css';
 import {CustomerTable} from "../customerTable";
 import {InputBase} from "../inputBase";
 import {SearchField} from "../searchField";
+
+// TODO: "No results" display
 
 function getEarliestTransactionDate(customers) {
   return customers.flatMap(customer => (
@@ -39,28 +41,32 @@ function SearchableCustomerTable({
   }
 
   return (
-      <div>
-        <SearchField
-          value={inputValues.searchFilter}
-          label="Search for Customer"
-          placeholder="Customer name or ID…"
-          onChange={handleChange("searchFilter")} />
-        <InputBase
-          id="number-of-months"
-          label="Number of Months"
-          min={1}
-          max={maximumMonths}
-          type="number"
-          value={inputValues.numberOfMonths}
-          onChange={handleChange("numberOfMonths")} />
-        <InputBase
-          id="start-date"
-          label="Start Month"
-          max={inputValues.endDate}
-          type="date"
-          value={inputValues.startDate}
-          onChange={handleChange("startDate")}
-        />
+      <div className={styles.root}>
+        <div className={styles.inputContainer}>
+          <SearchField
+            value={inputValues.searchFilter}
+            label="Search for Customer"
+            placeholder="Customer name or ID…"
+            onChange={handleChange("searchFilter")} />
+          <InputBase
+            className={styles.numberOfMonthsInput}
+            id="number-of-months"
+            label="Number of Months"
+            min={1}
+            max={maximumMonths}
+            type="number"
+            value={inputValues.numberOfMonths}
+            onChange={handleChange("numberOfMonths")} />
+          <InputBase
+            className={styles.startMonth}
+            id="start-month"
+            label="Start Month"
+            max={inputValues.endDate}
+            type="date"
+            value={inputValues.startDate}
+            onChange={handleChange("startDate")}
+          />
+        </div>
         <CustomerTable
           customers={filteredCustomers}
           startMonth={new Date(inputValues.startDate)}

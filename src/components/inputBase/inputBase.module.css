@@ -1,3 +1,11 @@
-.root {
-  color: red;
+.root > label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.root > input {
+  display: block;
+  padding: 8px;
+  border: 2px solid #303030;
+  border-radius: 6px;
 }

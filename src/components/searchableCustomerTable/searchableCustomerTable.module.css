@@ -1,0 +1,7 @@
+.inputContainer {
+  margin-bottom: 16px;
+}
+
+.inputContainer > * + * {
+  margin-top: 16px;
+}
