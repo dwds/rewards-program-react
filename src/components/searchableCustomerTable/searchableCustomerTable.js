@@ -2,6 +2,7 @@ import React, {useMemo, useState} from "react";
 import PropTypes from 'prop-types';
 // import styles from './searchableCustomerTable.module.css';
 import {CustomerTable} from "../customerTable";
+import {InputBase} from "../inputBase";
 import {SearchField} from "../searchField";
 
 function getEarliestTransactionDate(customers) {
@@ -44,28 +45,22 @@ function SearchableCustomerTable({
           label="Search for Customer"
           placeholder="Customer name or ID…"
           onChange={handleChange("searchFilter")} />
-        <div>
-          <label>
-            Number of Months:
-            <input
-              type="number"
-              min={1}
-              max={maximumMonths}
-              value={inputValues.numberOfMonths}
-              onChange={handleChange("numberOfMonths")} />
-          </label>
-        </div>
-        <div>
-          <label>
-            Start Month:
-            <input
-              type="date"
-              max={inputValues.endDate}
-              value={inputValues.startDate}
-              onChange={handleChange("startDate")} />
-          </label>
-        </div>
-
+        <InputBase
+          id="number-of-months"
+          label="Number of Months"
+          min={1}
+          max={maximumMonths}
+          type="number"
+          value={inputValues.numberOfMonths}
+          onChange={handleChange("numberOfMonths")} />
+        <InputBase
+          id="start-date"
+          label="Start Month"
+          max={inputValues.endDate}
+          type="date"
+          value={inputValues.startDate}
+          onChange={handleChange("startDate")}
+        />
         <CustomerTable
           customers={filteredCustomers}
           startMonth={new Date(inputValues.startDate)}

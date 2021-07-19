@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import styles from './searchField.module.css';
+// import styles from './searchField.module.css';
+import {InputBase} from '../inputBase';
 
 function SearchField({
   id = "search",
@@ -10,15 +11,14 @@ function SearchField({
   value = ""
 }) {
   return (
-    <div className={styles.root}>
-      <label htmlFor={id}>{label}</label>
-      <input
-        id={id}
-        type="search"
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange} />
-    </div>
+    <InputBase
+      id={id}
+      label={label}
+      type="search"
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+    />
   );
 }
 
