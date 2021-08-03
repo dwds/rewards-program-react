@@ -65,10 +65,15 @@ function SearchableCustomerTable({
           placeholder="Customer name or ID"
           onChange={handleChange("searchFilter")} />
 
-        <CustomerTable
-          customers={filteredCustomers}
-          startMonth={new Date(inputValues.startDate)}
-          numberOfMonths={parseInt(inputValues.numberOfMonths)} />
+        {filteredCustomers.length > 0 && new Date(inputValues.startDate).toString() !== "Invalid Date"
+          ? <CustomerTable
+            customers={filteredCustomers}
+            startMonth={new Date(inputValues.startDate)}
+            numberOfMonths={parseInt(inputValues.numberOfMonths)} />
+          : <p>No results found.</p>
+        }
+
+
       </div>
   );
 }
