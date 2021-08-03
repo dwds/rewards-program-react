@@ -43,11 +43,15 @@ function SearchableCustomerTable({
   return (
       <div className={styles.root}>
         <div className={styles.inputContainer}>
-          <SearchField
-            value={inputValues.searchFilter}
-            label="Search for Customer"
-            placeholder="Customer name or ID…"
-            onChange={handleChange("searchFilter")} />
+          <InputBase
+            className={styles.startMonth}
+            id="start-month"
+            label="Start Month"
+            max={inputValues.endDate}
+            type="date"
+            value={inputValues.startDate}
+            onChange={handleChange("startDate")} />
+
           <InputBase
             className={styles.numberOfMonthsInput}
             id="number-of-months"
@@ -57,16 +61,15 @@ function SearchableCustomerTable({
             type="number"
             value={inputValues.numberOfMonths}
             onChange={handleChange("numberOfMonths")} />
-          <InputBase
-            className={styles.startMonth}
-            id="start-month"
-            label="Start Month"
-            max={inputValues.endDate}
-            type="date"
-            value={inputValues.startDate}
-            onChange={handleChange("startDate")}
-          />
         </div>
+
+        <SearchField
+          className={styles.searchInput}
+          value={inputValues.searchFilter}
+          label="Search for Customer"
+          placeholder="Customer name or ID…"
+          onChange={handleChange("searchFilter")} />
+
         <CustomerTable
           customers={filteredCustomers}
           startMonth={new Date(inputValues.startDate)}

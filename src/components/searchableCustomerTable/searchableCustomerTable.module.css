@@ -1,7 +1,9 @@
 .inputContainer {
+  display: flex;
+  gap: 16px;
   margin-bottom: 16px;
 }
 
-.inputContainer > * + * {
-  margin-top: 16px;
+.searchInput {
+  margin-bottom: 16px;
 }

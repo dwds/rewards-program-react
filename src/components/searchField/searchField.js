@@ -8,7 +8,8 @@ function SearchField({
   label = "Search",
   onChange = null,
   placeholder = "Search…",
-  value = ""
+  value = "",
+  ...other
 }) {
   return (
     <InputBase
@@ -18,6 +19,7 @@ function SearchField({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      {...other}
     />
   );
 }
