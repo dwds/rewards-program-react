@@ -73,7 +73,7 @@ function SearchableCustomerTable({
         <CustomerTable
           customers={filteredCustomers}
           startMonth={new Date(inputValues.startDate)}
-          numberOfMonths={inputValues.numberOfMonths} />
+          numberOfMonths={parseInt(inputValues.numberOfMonths)} />
       </div>
   );
 }
