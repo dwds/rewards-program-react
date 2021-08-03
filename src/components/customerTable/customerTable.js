@@ -44,12 +44,21 @@ function CustomerTable({
       </thead>
 
       <tbody>
-        {customers.map(customer => (
-          <CustomerRow
-            customer={customer}
-            months={months}
-            key={customer.id} />
-        ))}
+        {customers.length > 0 ?
+          customers.map(customer => (
+            <CustomerRow
+              customer={customer}
+              months={months}
+              key={customer.id} />
+          )) :
+          <tr>
+            <td
+              className={styles.noResults}
+              colSpan={months.length + 3}>
+              No customers found.
+            </td>
+          </tr>
+        }
       </tbody>
     </table>
   );

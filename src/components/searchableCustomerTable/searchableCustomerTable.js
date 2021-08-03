@@ -5,8 +5,6 @@ import {CustomerTable} from "../customerTable";
 import {InputBase} from "../inputBase";
 import {SearchField} from "../searchField";
 
-// TODO: "No results" display
-
 function getEarliestTransactionDate(customers) {
   return customers.flatMap(customer => (
     customer.transactions.map(transaction => (

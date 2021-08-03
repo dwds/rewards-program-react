@@ -51,3 +51,7 @@
   border-top-right-radius: var(--border-radius-row);
   border-bottom-right-radius: var(--border-radius-row);
 }
+
+.noResults {
+  text-align: center;
+}
