@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {InputBase} from '../inputBase';
 
 function SearchField({
-  id = "search",
   label = "Search",
   onChange = null,
   placeholder = "Search…",
@@ -12,7 +11,6 @@ function SearchField({
 }) {
   return (
     <InputBase
-      id={id}
       label={label}
       type="search"
       placeholder={placeholder}

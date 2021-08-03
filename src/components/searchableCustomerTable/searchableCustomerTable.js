@@ -43,7 +43,6 @@ function SearchableCustomerTable({
         <div className={styles.inputContainer}>
           <InputBase
             className={styles.startMonth}
-            id="start-month"
             label="Start Month"
             max={inputValues.endDate}
             type="date"
@@ -52,7 +51,6 @@ function SearchableCustomerTable({
 
           <InputBase
             className={styles.numberOfMonthsInput}
-            id="number-of-months"
             label="Number of Months"
             min={1}
             max={maximumMonths}
