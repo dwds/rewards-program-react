@@ -44,7 +44,6 @@ function SearchableCustomerTable({
           <InputBase
             className={styles.startMonth}
             label="Start Month"
-            max={inputValues.endDate}
             type="date"
             value={inputValues.startDate}
             onChange={handleChange("startDate")} />
