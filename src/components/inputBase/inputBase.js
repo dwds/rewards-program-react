@@ -31,7 +31,7 @@ InputBase.propTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   type: PropTypes.oneOf(["date", "datetime-local", "email", "file", "hidden", "month", "number", "password", "search", "tel", "text", "time", "url", "week"]),
-  value: PropTypes.string
+  value: PropTypes.any
 };
 
 export default InputBase;
