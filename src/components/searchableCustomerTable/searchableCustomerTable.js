@@ -67,7 +67,7 @@ function SearchableCustomerTable({
           className={styles.searchInput}
           value={inputValues.searchFilter}
           label="Search for Customer"
-          placeholder="Customer name or ID…"
+          placeholder="Customer name or ID"
           onChange={handleChange("searchFilter")} />
 
         <CustomerTable

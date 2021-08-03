@@ -8,6 +8,8 @@
   padding: calc(var(--spacing) * 0.5);
   border: var(--border-width) solid var(--dark-gray);
   border-radius: var(--border-radius-large);
+  font-family: var(--font-family);
+  font-size: 1rem;
 }
 
 .root:focus-within > label {
