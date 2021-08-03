@@ -1,9 +1,19 @@
+.root {
+  --spacing: 16px;
+  --border-width: 2px;
+  --border-radius-large: 6px;
+  --border-radius-small: 4px;
+  --dark-gray: #303030;
+  --light-gray: #ececec;
+  --primary-blue: royalblue;
+}
+
 .inputContainer {
   display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
 }
 
 .searchInput {
-  margin-bottom: 16px;
+  margin-bottom: var(--spacing);
 }

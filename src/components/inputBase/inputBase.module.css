@@ -1,20 +1,20 @@
 .root > label {
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: calc(var(--spacing) * 0.25);
 }
 
 .root > input {
   display: block;
-  padding: 8px;
-  border: 3px solid #303030;
-  border-radius: 6px;
+  padding: calc(var(--spacing) * 0.5);
+  border: var(--border-width) solid var(--dark-gray);
+  border-radius: var(--border-radius-large);
 }
 
 .root:focus-within > label {
-  color: royalblue;
+  color: var(--primary-blue);
 }
 
 .root > input:focus {
-  border-color: royalblue;
+  border-color: var(--primary-blue);
   outline: 0;
 }
