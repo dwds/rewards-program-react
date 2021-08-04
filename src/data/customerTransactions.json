@@ -28,6 +28,31 @@
           "transactionNumber": "5d01efb068fcd891f4533f85",
           "date": "2021-04-15T10:06:47Z",
           "total": 133.08
+        },
+        {
+          "transactionNumber": "5d01efb03b6d67776710c0b1",
+          "date": "2021-08-26T05:12:11Z",
+          "total": 57.01
+        },
+        {
+          "transactionNumber": "5d01efb09bca305aba29b0a0",
+          "date": "2021-06-23T04:43:19Z",
+          "total": 100.02
+        },
+        {
+          "transactionNumber": "5d01efb035b7c0f1d63b5cc0",
+          "date": "2021-08-25T01:02:45Z",
+          "total": 323.15
+        },
+        {
+          "transactionNumber": "5d01efb015ca2e9141d9833f",
+          "date": "2021-07-04T02:29:09Z",
+          "total": 20.87
+        },
+        {
+          "transactionNumber": "5d01efb068fcd891f4533f85",
+          "date": "2021-07-15T10:06:47Z",
+          "total": 54.13
         }
       ]
     },
@@ -94,6 +119,51 @@
           "transactionNumber": "5d01efb0e6e6646fbce53ef6",
           "date": "2021-04-03T11:25:48Z",
           "total": 14.87
+        },
+        {
+          "transactionNumber": "5d01efb0b0e1fe17602149d5",
+          "date": "2021-06-25T03:18:27Z",
+          "total": 88.88
+        },
+        {
+          "transactionNumber": "5d01efb0b86dd460a4e8f4fa",
+          "date": "2021-06-04T06:34:06Z",
+          "total": 67.00
+        },
+        {
+          "transactionNumber": "5d01efb0793d274ade60c538",
+          "date": "2021-06-29T01:35:48Z",
+          "total": 109.75
+        },
+        {
+          "transactionNumber": "5d01efb0396006358f5a5f45",
+          "date": "2021-06-20T09:00:10Z",
+          "total": 189.99
+        },
+        {
+          "transactionNumber": "5d01efb0159aa6c36f61873c",
+          "date": "2021-07-13T10:14:14Z",
+          "total": 35.75
+        },
+        {
+          "transactionNumber": "5d01efb02795a6b524260c23",
+          "date": "2021-07-20T11:12:48Z",
+          "total": 88.90
+        },
+        {
+          "transactionNumber": "5d01efb0af069602500b818b",
+          "date": "2021-06-31T07:21:44Z",
+          "total": 189.43
+        },
+        {
+          "transactionNumber": "5d01efb051c887c2a50b2b17",
+          "date": "2021-07-02T01:22:12Z",
+          "total": 28.09
+        },
+        {
+          "transactionNumber": "5d01efb0732633f54125dc1e",
+          "date": "2021-08-07T02:56:27Z",
+          "total": 123.33
         }
       ]
     },
@@ -155,6 +225,46 @@
           "transactionNumber": "5d01efb0013bd2430bdca437",
           "date": "2021-04-06T08:54:27Z",
           "total": 176.49
+        },
+        {
+          "transactionNumber": "5d01efb0b1646d0785506dcf",
+          "date": "2021-07-09T01:35:02Z",
+          "total": 96.52
+        },
+        {
+          "transactionNumber": "5d01efb0a465ef21a6b265ea",
+          "date": "2021-06-28T03:06:12Z",
+          "total": 500.21
+        },
+        {
+          "transactionNumber": "5d01efb0ed63c87607708523",
+          "date": "2021-08-29T02:25:00Z",
+          "total": 102.39
+        },
+        {
+          "transactionNumber": "5d01efb0fff62e31c9cbafe0",
+          "date": "2021-07-17T12:17:45Z",
+          "total": 22.13
+        },
+        {
+          "transactionNumber": "5d01efb092d058261ee74e01",
+          "date": "2021-07-20T01:08:37Z",
+          "total": 88.12
+        },
+        {
+          "transactionNumber": "5d01efb04076028a81e4bd6c",
+          "date": "2021-06-11T04:00:27Z",
+          "total": 50.31
+        },
+        {
+          "transactionNumber": "5d01efb0e9f386475c555e16",
+          "date": "2021-08-24T03:46:06Z",
+          "total": 75.28
+        },
+        {
+          "transactionNumber": "5d01efb0013bd2430bdca437",
+          "date": "2021-07-06T08:54:27Z",
+          "total": 99.21
         }
       ]
     },
@@ -191,6 +301,21 @@
           "transactionNumber": "5d01efb0304d4d02a4b44f30",
           "date": "2021-05-04T12:47:30Z",
           "total": 145.81
+        },
+        {
+          "transactionNumber": "5d01efb0ed17a17635daa6ea",
+          "date": "2021-08-08T04:47:16Z",
+          "total": 72.89
+        },
+        {
+          "transactionNumber": "5d01efb02ae0650c0b1df26b",
+          "date": "2021-08-02T03:40:45Z",
+          "total": 128.56
+        },
+        {
+          "transactionNumber": "5d01efb0304d4d02a4b44f30",
+          "date": "2021-08-04T12:47:30Z",
+          "total": 192.45
         }
       ]
     },
@@ -207,6 +332,16 @@
           "transactionNumber": "5d01efb07c1008593af9c3b3",
           "date": "2021-03-09T09:47:43Z",
           "total": 197.04
+        },
+        {
+          "transactionNumber": "5d01efb0e2a8af39fc8e56eb",
+          "date": "2021-08-09T05:04:23Z",
+          "total": 73.18
+        },
+        {
+          "transactionNumber": "5d01efb07c1008593af9c3b3",
+          "date": "2021-06-09T09:47:43Z",
+          "total": 125.25
         }
       ]
     },
@@ -243,6 +378,36 @@
           "transactionNumber": "5d01efb04fb5db33296c4ae6",
           "date": "2021-04-06T10:36:42Z",
           "total": 67.48
+        },
+        {
+          "transactionNumber": "5d01efb0a0956ccc36d5aa92",
+          "date": "2021-07-18T07:00:44Z",
+          "total": 101.21
+        },
+        {
+          "transactionNumber": "5d01efb06baf76e42fb0369b",
+          "date": "2021-07-05T03:45:56Z",
+          "total": 175.47
+        },
+        {
+          "transactionNumber": "5d01efb0e149d5a42af00073",
+          "date": "2021-06-22T06:32:26Z",
+          "total": 54.19
+        },
+        {
+          "transactionNumber": "5d01efb0efcb031a83169716",
+          "date": "2021-06-06T05:38:12Z",
+          "total": 90.21
+        },
+        {
+          "transactionNumber": "5d01efb0af04a19f17d048b0",
+          "date": "2021-08-19T12:50:15Z",
+          "total": 20.89
+        },
+        {
+          "transactionNumber": "5d01efb04fb5db33296c4ae6",
+          "date": "2021-08-06T10:36:42Z",
+          "total": 55.55
         }
       ]
     },
@@ -299,6 +464,31 @@
           "transactionNumber": "5d01efb035d08aa09f5e4aeb",
           "date": "2021-03-25T03:33:38Z",
           "total": 10.45
+        },
+        {
+          "transactionNumber": "5d01efb0157ec16cae340e82",
+          "date": "2021-07-18T04:11:52Z",
+          "total": 254.57
+        },
+        {
+          "transactionNumber": "5d01efb00f96d51daf48430a",
+          "date": "2021-08-15T01:52:31Z",
+          "total": 125.32
+        },
+        {
+          "transactionNumber": "5d01efb0f17e5ef8b82bd75b",
+          "date": "2021-07-15T12:39:58Z",
+          "total": 230.40
+        },
+        {
+          "transactionNumber": "5d01efb03f0e5a9f693e2f2b",
+          "date": "2021-06-02T10:59:47Z",
+          "total": 331.23
+        },
+        {
+          "transactionNumber": "5d01efb035d08aa09f5e4aeb",
+          "date": "2021-06-25T03:33:38Z",
+          "total": 67.89
         }
       ]
     },
@@ -365,6 +555,36 @@
           "transactionNumber": "5d01efb0be54bb0af36314e7",
           "date": "2021-03-26T04:45:43Z",
           "total": 53.53
+        },
+        {
+          "transactionNumber": "5d01efb0f2a25b2b5baa5686",
+          "date": "2021-08-07T11:55:48Z",
+          "total": 125.54
+        },
+        {
+          "transactionNumber": "5d01efb09d083e565a3dccc5",
+          "date": "2021-07-24T10:23:14Z",
+          "total": 21.19
+        },
+        {
+          "transactionNumber": "5d01efb050ade0972c3606db",
+          "date": "2021-06-30T05:33:51Z",
+          "total": 58.88
+        },
+        {
+          "transactionNumber": "5d01efb0852894820fa81aa9",
+          "date": "2021-08-06T07:19:12Z",
+          "total": 87.54
+        },
+        {
+          "transactionNumber": "5d01efb01b4da4d613ca2f5e",
+          "date": "2021-07-03T12:26:09Z",
+          "total": 99.88
+        },
+        {
+          "transactionNumber": "5d01efb0be54bb0af36314e7",
+          "date": "2021-07-26T04:45:43Z",
+          "total": 55.52
         }
       ]
     },
@@ -436,6 +656,36 @@
           "transactionNumber": "5d01efb0dd3d9abbc9c7d090",
           "date": "2021-05-25T09:30:24Z",
           "total": 81.28
+        },
+        {
+          "transactionNumber": "5d01efb079b2b341d48ec959",
+          "date": "2021-07-14T10:37:14Z",
+          "total": 77.69
+        },
+        {
+          "transactionNumber": "5d01efb0a1d3e4822a512c4d",
+          "date": "2021-07-25T06:23:32Z",
+          "total": 45.89
+        },
+        {
+          "transactionNumber": "5d01efb013b75ea39eeb7ea6",
+          "date": "2021-08-11T10:07:01Z",
+          "total": 321.18
+        },
+        {
+          "transactionNumber": "5d01efb0bb2cb76f1004cd10",
+          "date": "2021-08-18T07:08:23Z",
+          "total": 274.32
+        },
+        {
+          "transactionNumber": "5d01efb055f4f9c0c65599db",
+          "date": "2021-06-26T12:37:46Z",
+          "total": 58.42
+        },
+        {
+          "transactionNumber": "5d01efb0dd3d9abbc9c7d090",
+          "date": "2021-06-25T09:30:24Z",
+          "total": 90.01
         }
       ]
     },
@@ -457,6 +707,21 @@
           "transactionNumber": "5d01efb0face5e8e074a9ba3",
           "date": "2021-03-21T06:12:29Z",
           "total": 103.54
+        },
+        {
+          "transactionNumber": "5d01efb01234521048fe90f1",
+          "date": "2021-07-08T09:45:24Z",
+          "total": 89.64
+        },
+        {
+          "transactionNumber": "5d01efb0912482eb370e0ea7",
+          "date": "2021-06-11T08:32:11Z",
+          "total": 149.90
+        },
+        {
+          "transactionNumber": "5d01efb0face5e8e074a9ba3",
+          "date": "2021-06-21T06:12:29Z",
+          "total": 73.28
         }
       ]
     },
@@ -508,6 +773,31 @@
           "transactionNumber": "5d01efb03d4f134be6528ee9",
           "date": "2021-03-16T06:39:46Z",
           "total": 225.88
+        },
+        {
+          "transactionNumber": "5d01efb066e84fd5e0badcfa",
+          "date": "2021-06-23T08:13:43Z",
+          "total": 425.88
+        },
+        {
+          "transactionNumber": "5d01efb0f89a61e8073985fe",
+          "date": "2021-06-04T11:07:34Z",
+          "total": 28.88
+        },
+        {
+          "transactionNumber": "5d01efb095fe6f084ef20189",
+          "date": "2021-07-11T12:14:39Z",
+          "total": 76.54
+        },
+        {
+          "transactionNumber": "5d01efb0b1cdfc7701b3bdd9",
+          "date": "2021-06-07T12:59:18Z",
+          "total": 122.78
+        },
+        {
+          "transactionNumber": "5d01efb03d4f134be6528ee9",
+          "date": "2021-06-16T06:39:46Z",
+          "total": 321.99
         }
       ]
     },
@@ -524,6 +814,16 @@
           "transactionNumber": "5d01efb0dce91ebce3c7ec7b",
           "date": "2021-04-07T02:16:10Z",
           "total": 106.58
+        },
+        {
+          "transactionNumber": "5d01efb0e59a0ded5a383270",
+          "date": "2021-08-14T03:03:37Z",
+          "total": 100.22
+        },
+        {
+          "transactionNumber": "5d01efb0dce91ebce3c7ec7b",
+          "date": "2021-07-07T02:16:10Z",
+          "total": 189.55
         }
       ]
     },
@@ -550,6 +850,21 @@
           "transactionNumber": "5d01efb0d483dc6180ae9e82",
           "date": "2021-03-22T08:50:07Z",
           "total": 210.82
+        },
+        {
+          "transactionNumber": "5d01efb0b6bf532f384795fb",
+          "date": "2021-06-04T10:49:21Z",
+          "total": 81.11
+        },
+        {
+          "transactionNumber": "5d01efb01c985d7ff0f20f98",
+          "date": "2021-07-05T02:18:14Z",
+          "total": 45.21
+        },
+        {
+          "transactionNumber": "5d01efb0d483dc6180ae9e82",
+          "date": "2021-07-22T08:50:07Z",
+          "total": 145.89
         }
       ]
     },
@@ -631,6 +946,31 @@
           "transactionNumber": "5d01efb09a5de7b12f1bcc19",
           "date": "2021-05-03T07:31:27Z",
           "total": 166.04
+        },
+        {
+          "transactionNumber": "5d01efb0a5cb50449a0c2cf2",
+          "date": "2021-06-08T11:28:31Z",
+          "total": 121.89
+        },
+        {
+          "transactionNumber": "5d01efb09007a45a04b65dc1",
+          "date": "2021-08-12T11:28:10Z",
+          "total": 89.10
+        },
+        {
+          "transactionNumber": "5d01efb07de52fd082ffb3ee",
+          "date": "2021-08-05T12:06:31Z",
+          "total": 205.89
+        },
+        {
+          "transactionNumber": "5d01efb042e73d27dea48b35",
+          "date": "2021-08-22T10:13:07Z",
+          "total": 88.98
+        },
+        {
+          "transactionNumber": "5d01efb09a5de7b12f1bcc19",
+          "date": "2021-07-03T07:31:27Z",
+          "total": 148.98
         }
       ]
     },
@@ -647,6 +987,26 @@
           "transactionNumber": "5d01efb00f1b3d54b402aa1b",
           "date": "2021-05-12T05:22:31Z",
           "total": 49.69
+        },
+        {
+          "transactionNumber": "5d01efb0bf0b105771227a23",
+          "date": "2021-06-22T10:19:59Z",
+          "total": 277.78
+        },
+        {
+          "transactionNumber": "5d01efb00f1b3d54b402aa1b",
+          "date": "2021-06-12T05:22:31Z",
+          "total": 43.21
+        },
+        {
+          "transactionNumber": "5d01efb0bf0b105771227a23",
+          "date": "2021-06-22T10:19:59Z",
+          "total": 111.87
+        },
+        {
+          "transactionNumber": "5d01efb00f1b3d54b402aa1b",
+          "date": "2021-08-12T05:22:31Z",
+          "total": 69.69
         }
       ]
     },
@@ -717,6 +1077,56 @@
         {
           "transactionNumber": "5d01efb063db8dda2b96e047",
           "date": "2021-04-19T06:40:08Z",
+          "total": 58.21
+        },
+        {
+          "transactionNumber": "5d01efb0358eb1a918668f52",
+          "date": "2021-06-25T04:36:20Z",
+          "total": 127.93
+        },
+        {
+          "transactionNumber": "5d01efb0686c1d4e959f844b",
+          "date": "2021-06-19T06:34:35Z",
+          "total": 126.11
+        },
+        {
+          "transactionNumber": "5d01efb041408965458f177f",
+          "date": "2021-08-02T03:22:20Z",
+          "total": 71.01
+        },
+        {
+          "transactionNumber": "5d01efb09d49b2b75bf45c44",
+          "date": "2021-07-15T08:12:00Z",
+          "total": 39.12
+        },
+        {
+          "transactionNumber": "5d01efb015e5046e9fa5a5eb",
+          "date": "2021-07-13T02:25:38Z",
+          "total": 158.1
+        },
+        {
+          "transactionNumber": "5d01efb025c447534da50d6f",
+          "date": "2021-08-05T01:20:47Z",
+          "total": 146.8
+        },
+        {
+          "transactionNumber": "5d01efb06568a0aa781e9cc1",
+          "date": "2021-06-15T04:01:25Z",
+          "total": 195.21
+        },
+        {
+          "transactionNumber": "5d01efb0efbfd60919769fd4",
+          "date": "2021-07-12T01:09:26Z",
+          "total": 178.3
+        },
+        {
+          "transactionNumber": "5d01efb0343cd7dc5dec1f66",
+          "date": "2021-07-07T03:32:39Z",
+          "total": 105.66
+        },
+        {
+          "transactionNumber": "5d01efb063db8dda2b96e047",
+          "date": "2021-07-19T06:40:08Z",
           "total": 58.21
         }
       ]
@@ -794,6 +1204,76 @@
           "transactionNumber": "5d01efb04b7afa876d220472",
           "date": "2021-05-16T05:53:59Z",
           "total": 30
+        },
+        {
+          "transactionNumber": "5d01efb0a982ad95dbf81e78",
+          "date": "2021-08-23T09:16:03Z",
+          "total": 160.51
+        },
+        {
+          "transactionNumber": "5d01efb051c277bd8c628f19",
+          "date": "2021-08-12T02:20:41Z",
+          "total": 109.17
+        },
+        {
+          "transactionNumber": "5d01efb05bc349a613c84dab",
+          "date": "2021-08-18T04:52:33Z",
+          "total": 164.24
+        },
+        {
+          "transactionNumber": "5d01efb06752410306519409",
+          "date": "2021-07-28T09:01:18Z",
+          "total": 170.29
+        },
+        {
+          "transactionNumber": "5d01efb08e6adc6369e95497",
+          "date": "2021-06-15T10:27:39Z",
+          "total": 34.9
+        },
+        {
+          "transactionNumber": "5d01efb0fcacba228698fa1f",
+          "date": "2021-07-16T10:40:44Z",
+          "total": 244.03
+        },
+        {
+          "transactionNumber": "5d01efb0e09ecbee63a86907",
+          "date": "2021-07-01T05:49:29Z",
+          "total": 210
+        },
+        {
+          "transactionNumber": "5d01efb0a19275a529cd0bce",
+          "date": "2021-08-02T02:58:53Z",
+          "total": 241.81
+        },
+        {
+          "transactionNumber": "5d01efb0f4af10270c0228ff",
+          "date": "2021-06-09T11:23:23Z",
+          "total": 36.97
+        },
+        {
+          "transactionNumber": "5d01efb0081e09eced41824b",
+          "date": "2021-06-25T07:24:35Z",
+          "total": 40.28
+        },
+        {
+          "transactionNumber": "5d01efb0df8e8894feb951e8",
+          "date": "2021-06-04T08:21:11Z",
+          "total": 97.16
+        },
+        {
+          "transactionNumber": "5d01efb0d3da39b96cb39b17",
+          "date": "2021-08-30T03:36:49Z",
+          "total": 234.26
+        },
+        {
+          "transactionNumber": "5d01efb0442726c054b61f0f",
+          "date": "2021-07-15T11:31:09Z",
+          "total": 205.04
+        },
+        {
+          "transactionNumber": "5d01efb04b7afa876d220472",
+          "date": "2021-07-16T05:53:59Z",
+          "total": 30
         }
       ]
     },
@@ -860,6 +1340,26 @@
           "transactionNumber": "5d01efb0b58ed448a55aa39b",
           "date": "2021-05-05T01:56:32Z",
           "total": 64.05
+        },
+        {
+          "transactionNumber": "5d01efb049ab84b4a7ba3c72",
+          "date": "2021-06-07T08:25:40Z",
+          "total": 88.90
+        },
+        {
+          "transactionNumber": "5d01efb0028891d044276d2c",
+          "date": "2021-08-30T08:14:58Z",
+          "total": 154.84
+        },
+        {
+          "transactionNumber": "5d01efb0d0a0c4adfac5264b",
+          "date": "2021-07-06T10:47:19Z",
+          "total": 25.48
+        },
+        {
+          "transactionNumber": "5d01efb0b58ed448a55aa39b",
+          "date": "2021-08-05T01:56:32Z",
+          "total": 177.21
         }
       ]
     },
@@ -881,6 +1381,21 @@
           "transactionNumber": "5d01efb02f0aeefb4df2bd67",
           "date": "2021-05-06T06:02:31Z",
           "total": 123.45
+        },
+        {
+          "transactionNumber": "5d01efb08aa5b8b7b80f31d9",
+          "date": "2021-06-01T01:15:27Z",
+          "total": 89.55
+        },
+        {
+          "transactionNumber": "5d01efb0c558dbb274f79dd8",
+          "date": "2021-06-09T11:12:33Z",
+          "total": 219.54
+        },
+        {
+          "transactionNumber": "5d01efb02f0aeefb4df2bd67",
+          "date": "2021-08-06T06:02:31Z",
+          "total": 88.43
         }
       ]
     },
@@ -947,6 +1462,46 @@
           "transactionNumber": "5d01efb0ffd57bf5a2e74c66",
           "date": "2021-03-31T06:12:35Z",
           "total": 184.57
+        },
+        {
+          "transactionNumber": "5d01efb0d16681ee6efcd537",
+          "date": "2021-07-29T09:12:48Z",
+          "total": 113.89
+        },
+        {
+          "transactionNumber": "5d01efb04bb02e10337661dc",
+          "date": "2021-05-22T08:08:33Z",
+          "total": 87.90
+        },
+        {
+          "transactionNumber": "5d01efb0778857fde44a07e8",
+          "date": "2021-06-21T04:01:33Z",
+          "total": 198.88
+        },
+        {
+          "transactionNumber": "5d01efb04a0524d795efb969",
+          "date": "2021-06-19T08:33:01Z",
+          "total": 90.77
+        },
+        {
+          "transactionNumber": "5d01efb0ff12182fe88b85ba",
+          "date": "2021-07-22T03:50:55Z",
+          "total": 37.89
+        },
+        {
+          "transactionNumber": "5d01efb0a355eba16c250dd5",
+          "date": "2021-08-09T03:30:26Z",
+          "total": 231.89
+        },
+        {
+          "transactionNumber": "5d01efb0cbe2b7e4161440c4",
+          "date": "2021-08-23T05:39:31Z",
+          "total": 88.64
+        },
+        {
+          "transactionNumber": "5d01efb0ffd57bf5a2e74c66",
+          "date": "2021-06-31T06:12:35Z",
+          "total": 155.89
         }
       ]
     },
@@ -1003,6 +1558,21 @@
           "transactionNumber": "5d01efb082ebb8a632969b18",
           "date": "2021-05-21T09:19:05Z",
           "total": 139.39
+        },
+        {
+          "transactionNumber": "5d01efb0008bb08c80163d2e",
+          "date": "2021-07-10T06:54:24Z",
+          "total": 77.44
+        },
+        {
+          "transactionNumber": "5d01efb0d98da1e97e95ceff",
+          "date": "2021-07-15T08:50:31Z",
+          "total": 134.21
+        },
+        {
+          "transactionNumber": "5d01efb082ebb8a632969b18",
+          "date": "2021-08-21T09:19:05Z",
+          "total": 99.76
         }
       ]
     },
@@ -1060,6 +1630,26 @@
           "transactionNumber": "5d01efb00ba8997a16f40bbc",
           "date": "2021-04-02T08:49:18Z",
           "total": 26.8
+        },
+        {
+          "transactionNumber": "5d01efb07bd203d2fd8f0aa0",
+          "date": "2021-06-15T12:58:17Z",
+          "total": 21.44
+        },
+        {
+          "transactionNumber": "5d01efb0cbc2dcede4cfe62a",
+          "date": "2021-06-30T12:07:02Z",
+          "total": 101.86
+        },
+        {
+          "transactionNumber": "5d01efb08976ffe73b772237",
+          "date": "2021-07-02T05:11:33Z",
+          "total": 30.77
+        },
+        {
+          "transactionNumber": "5d01efb00ba8997a16f40bbc",
+          "date": "2021-08-02T08:49:18Z",
+          "total": 26.8
         }
       ]
     },
@@ -1090,6 +1680,26 @@
         {
           "transactionNumber": "5d01efb0c41f350bf94fb38e",
           "date": "2021-03-21T09:42:59Z",
+          "total": 167.2
+        },
+        {
+          "transactionNumber": "5d01efb00430a2f62625aaae",
+          "date": "2021-06-19T05:04:31Z",
+          "total": 110.42
+        },
+        {
+          "transactionNumber": "5d01efb0152afb5802af4ba4",
+          "date": "2021-08-05T04:46:48Z",
+          "total": 110.83
+        },
+        {
+          "transactionNumber": "5d01efb0f5c134f3c7c84256",
+          "date": "2021-08-24T09:40:50Z",
+          "total": 218.8
+        },
+        {
+          "transactionNumber": "5d01efb0c41f350bf94fb38e",
+          "date": "2021-07-21T09:42:59Z",
           "total": 167.2
         }
       ]
@@ -1152,6 +1762,56 @@
           "transactionNumber": "5d01efb02c5f7525aac03022",
           "date": "2021-03-25T04:16:56Z",
           "total": 106.35
+        },
+        {
+          "transactionNumber": "5d01efb017560f71e32fcbcc",
+          "date": "2021-06-08T10:56:03Z",
+          "total": 244.92
+        },
+        {
+          "transactionNumber": "5d01efb025b93560402334a0",
+          "date": "2021-06-13T06:41:37Z",
+          "total": 39.02
+        },
+        {
+          "transactionNumber": "5d01efb0a82421a0dcec758d",
+          "date": "2021-06-11T05:27:58Z",
+          "total": 137.67
+        },
+        {
+          "transactionNumber": "5d01efb039caf4a2f501a5be",
+          "date": "2021-06-13T11:27:15Z",
+          "total": 88.16
+        },
+        {
+          "transactionNumber": "5d01efb091e72b350de4b785",
+          "date": "2021-08-19T01:51:39Z",
+          "total": 49.54
+        },
+        {
+          "transactionNumber": "5d01efb01a4b5baae64cb54f",
+          "date": "2021-07-17T04:54:04Z",
+          "total": 203.46
+        },
+        {
+          "transactionNumber": "5d01efb03f3067518090a2f5",
+          "date": "2021-07-25T04:08:02Z",
+          "total": 117.37
+        },
+        {
+          "transactionNumber": "5d01efb0f177bacc01627e1e",
+          "date": "2021-07-29T12:11:09Z",
+          "total": 131.47
+        },
+        {
+          "transactionNumber": "5d01efb05b0aed779c138ccc",
+          "date": "2021-08-25T07:38:14Z",
+          "total": 223.43
+        },
+        {
+          "transactionNumber": "5d01efb02c5f7525aac03022",
+          "date": "2021-08-25T04:16:56Z",
+          "total": 106.35
         }
       ]
     },
@@ -1213,6 +1873,21 @@
           "transactionNumber": "5d01efb028ecce387bbb8cf6",
           "date": "2021-05-18T04:47:17Z",
           "total": 26.63
+        },
+        {
+          "transactionNumber": "5d01efb0b4511b4e6e726e85",
+          "date": "2021-08-11T03:15:06Z",
+          "total": 56.68
+        },
+        {
+          "transactionNumber": "5d01efb0682a9a4cf255d921",
+          "date": "2021-08-19T03:57:08Z",
+          "total": 144.89
+        },
+        {
+          "transactionNumber": "5d01efb028ecce387bbb8cf6",
+          "date": "2021-06-18T04:47:17Z",
+          "total": 26.63
         }
       ]
     },
@@ -1253,6 +1928,36 @@
         {
           "transactionNumber": "5d01efb0b595e1de7bc2e010",
           "date": "2021-05-13T09:27:53Z",
+          "total": 191.98
+        },
+        {
+          "transactionNumber": "5d01efb0be42a0d3b94fcac8",
+          "date": "2021-08-31T11:41:29Z",
+          "total": 171.66
+        },
+        {
+          "transactionNumber": "5d01efb02cc506fbe13cc066",
+          "date": "2021-08-16T03:57:03Z",
+          "total": 41.11
+        },
+        {
+          "transactionNumber": "5d01efb0af37b1b47818d594",
+          "date": "2021-07-23T04:17:12Z",
+          "total": 147.35
+        },
+        {
+          "transactionNumber": "5d01efb066d0fe17312bc351",
+          "date": "2021-07-15T11:19:04Z",
+          "total": 87.19
+        },
+        {
+          "transactionNumber": "5d01efb08b9038fed1468c02",
+          "date": "2021-06-14T11:03:59Z",
+          "total": 82.28
+        },
+        {
+          "transactionNumber": "5d01efb0b595e1de7bc2e010",
+          "date": "2021-07-13T09:27:53Z",
           "total": 191.98
         }
       ]
@@ -1320,6 +2025,36 @@
           "transactionNumber": "5d01efb077866d71a6ef9895",
           "date": "2021-05-10T06:28:05Z",
           "total": 234.04
+        },
+        {
+          "transactionNumber": "5d01efb067d8f5773d3e5a13",
+          "date": "2021-08-14T12:41:20Z",
+          "total": 78.74
+        },
+        {
+          "transactionNumber": "5d01efb0a61ef5bafaa26d24",
+          "date": "2021-06-04T02:22:36Z",
+          "total": 123.34
+        },
+        {
+          "transactionNumber": "5d01efb048c98318b284396f",
+          "date": "2021-07-19T06:39:38Z",
+          "total": 345.12
+        },
+        {
+          "transactionNumber": "5d01efb0fb4ebdcbfcf9b371",
+          "date": "2021-07-15T12:20:45Z",
+          "total": 187.90
+        },
+        {
+          "transactionNumber": "5d01efb0cbcf8a1da76b9d8e",
+          "date": "2021-07-29T03:55:31Z",
+          "total": 61.21
+        },
+        {
+          "transactionNumber": "5d01efb077866d71a6ef9895",
+          "date": "2021-08-10T06:28:05Z",
+          "total": 123.32
         }
       ]
     },
@@ -1360,6 +2095,41 @@
         {
           "transactionNumber": "5d01efb0091188bf13de1ed0",
           "date": "2021-04-27T10:11:37Z",
+          "total": 245.2
+        },
+        {
+          "transactionNumber": "5d01efb0827c7e60855cad34",
+          "date": "2021-08-09T04:30:41Z",
+          "total": 227.89
+        },
+        {
+          "transactionNumber": "5d01efb0e428ba5044c98f54",
+          "date": "2021-08-28T10:37:25Z",
+          "total": 228.87
+        },
+        {
+          "transactionNumber": "5d01efb0df988ff72ae4b633",
+          "date": "2021-06-31T07:15:41Z",
+          "total": 166.89
+        },
+        {
+          "transactionNumber": "5d01efb05e0a6826544397ff",
+          "date": "2021-06-12T07:10:59Z",
+          "total": 199.75
+        },
+        {
+          "transactionNumber": "5d01efb021e912d6fe223b3f",
+          "date": "2021-07-29T05:02:58Z",
+          "total": 131.95
+        },
+        {
+          "transactionNumber": "5d01efb0b421bf1d6cf75474",
+          "date": "2021-07-11T03:39:28Z",
+          "total": 36.53
+        },
+        {
+          "transactionNumber": "5d01efb0091188bf13de1ed0",
+          "date": "2021-07-27T10:11:37Z",
           "total": 245.2
         }
       ]
@@ -1416,6 +2186,31 @@
         {
           "transactionNumber": "5d01efb07964c7c7ff2405a5",
           "date": "2021-05-03T09:04:48Z",
+          "total": 14.32
+        },
+        {
+          "transactionNumber": "5d01efb0438f025bb01f4509",
+          "date": "2021-06-24T03:27:37Z",
+          "total": 239.94
+        },
+        {
+          "transactionNumber": "5d01efb04aac0c583bee69c3",
+          "date": "2021-06-31T08:23:12Z",
+          "total": 148.32
+        },
+        {
+          "transactionNumber": "5d01efb05943987826bfac55",
+          "date": "2021-07-16T03:38:05Z",
+          "total": 214.26
+        },
+        {
+          "transactionNumber": "5d01efb094c53a1eed3df847",
+          "date": "2021-07-29T04:22:22Z",
+          "total": 37.79
+        },
+        {
+          "transactionNumber": "5d01efb07964c7c7ff2405a5",
+          "date": "2021-08-03T09:04:48Z",
           "total": 14.32
         }
       ]
@@ -1504,6 +2299,21 @@
           "transactionNumber": "5d01efb0674875d878d895c4",
           "date": "2021-04-20T03:37:48Z",
           "total": 120.17
+        },
+        {
+          "transactionNumber": "5d01efb096b1b3c271c7191e",
+          "date": "2021-08-28T04:33:08Z",
+          "total": 44.94
+        },
+        {
+          "transactionNumber": "5d01efb01ce95c8ffe7ba9a8",
+          "date": "2021-08-16T07:02:50Z",
+          "total": 20.81
+        },
+        {
+          "transactionNumber": "5d01efb0674875d878d895c4",
+          "date": "2021-07-20T03:37:48Z",
+          "total": 120.17
         }
       ]
     },
@@ -1515,6 +2325,16 @@
           "transactionNumber": "5d01efb05f09e18f3f48bcd7",
           "date": "2021-05-14T07:10:07Z",
           "total": 230.55
+        },
+        {
+          "transactionNumber": "5d01efb05f09e18f3f48bcd7",
+          "date": "2021-08-14T07:10:07Z",
+          "total": 67.86
+        },
+        {
+          "transactionNumber": "5d01efb05f09e18f3f48bcd7",
+          "date": "2021-08-14T07:10:07Z",
+          "total": 120.55
         }
       ]
     },
@@ -1545,6 +2365,21 @@
         {
           "transactionNumber": "5d01efb034e0933cc5aa90f2",
           "date": "2021-05-13T11:35:00Z",
+          "total": 167.32
+        },
+        {
+          "transactionNumber": "5d01efb0a16b30ffcb043481",
+          "date": "2021-08-06T03:57:21Z",
+          "total": 237.15
+        },
+        {
+          "transactionNumber": "5d01efb0e9f4809f5b831efe",
+          "date": "2021-08-17T06:28:03Z",
+          "total": 165.41
+        },
+        {
+          "transactionNumber": "5d01efb034e0933cc5aa90f2",
+          "date": "2021-08-13T11:35:00Z",
           "total": 167.32
         }
       ]
@@ -1582,6 +2417,31 @@
           "transactionNumber": "5d01efb0e91e454872fa9c98",
           "date": "2021-05-05T03:57:50Z",
           "total": 14.36
+        },
+        {
+          "transactionNumber": "5d01efb01b948f974b6603c8",
+          "date": "2021-08-06T10:35:04Z",
+          "total": 89.98
+        },
+        {
+          "transactionNumber": "5d01efb025563a03db3ae845",
+          "date": "2021-06-07T01:51:57Z",
+          "total": 130.23
+        },
+        {
+          "transactionNumber": "5d01efb054570a04ec7d617f",
+          "date": "2021-07-03T08:55:03Z",
+          "total": 88.90
+        },
+        {
+          "transactionNumber": "5d01efb0a36beffccddbfd8d",
+          "date": "2021-07-13T05:48:28Z",
+          "total": 75.89
+        },
+        {
+          "transactionNumber": "5d01efb0e91e454872fa9c98",
+          "date": "2021-08-05T03:57:50Z",
+          "total": 124.32
         }
       ]
     },
@@ -1618,6 +2478,31 @@
           "transactionNumber": "5d01efb064d6ed7701223e86",
           "date": "2021-03-30T07:56:18Z",
           "total": 30.97
+        },
+        {
+          "transactionNumber": "5d01efb0c1511984d583cb94",
+          "date": "2021-08-21T11:42:25Z",
+          "total": 87.45
+        },
+        {
+          "transactionNumber": "5d01efb0f12970cfb08b03f6",
+          "date": "2021-06-28T02:56:52Z",
+          "total": 125.64
+        },
+        {
+          "transactionNumber": "5d01efb023fa819f258492f8",
+          "date": "2021-06-22T06:51:42Z",
+          "total": 130.62
+        },
+        {
+          "transactionNumber": "5d01efb0afe6e3821ef4e4b1",
+          "date": "2021-07-01T12:43:02Z",
+          "total": 37.33
+        },
+        {
+          "transactionNumber": "5d01efb064d6ed7701223e86",
+          "date": "2021-07-30T07:56:18Z",
+          "total": 30.97
         }
       ]
     },
@@ -1639,6 +2524,16 @@
         {
           "transactionNumber": "5d01efb025a2bc1ec3fd6616",
           "date": "2021-04-03T12:55:53Z",
+          "total": 208.47
+        },
+        {
+          "transactionNumber": "5d01efb025a2bc1ec3fd6616",
+          "date": "2021-08-03T12:55:53Z",
+          "total": 208.47
+        },
+        {
+          "transactionNumber": "5d01efb025a2bc1ec3fd6616",
+          "date": "2021-07-03T12:55:53Z",
           "total": 208.47
         }
       ]
@@ -1700,6 +2595,36 @@
         {
           "transactionNumber": "5d01efb0851b4836b852aa12",
           "date": "2021-03-21T11:33:00Z",
+          "total": 76.37
+        },
+        {
+          "transactionNumber": "5d01efb01feabf948a9937fa",
+          "date": "2021-06-01T06:55:06Z",
+          "total": 185.58
+        },
+        {
+          "transactionNumber": "5d01efb097dd1b7ad184cab6",
+          "date": "2021-07-05T12:21:05Z",
+          "total": 53.99
+        },
+        {
+          "transactionNumber": "5d01efb01af140eef458e792",
+          "date": "2021-06-09T11:02:22Z",
+          "total": 42.83
+        },
+        {
+          "transactionNumber": "5d01efb0a8c9e6e89794a751",
+          "date": "2021-06-02T08:23:30Z",
+          "total": 57.23
+        },
+        {
+          "transactionNumber": "5d01efb0a7d8f25c7f5f9061",
+          "date": "2021-06-23T01:35:02Z",
+          "total": 148.39
+        },
+        {
+          "transactionNumber": "5d01efb0851b4836b852aa12",
+          "date": "2021-08-21T11:33:00Z",
           "total": 76.37
         }
       ]
@@ -1819,6 +2744,31 @@
           "transactionNumber": "5d01efb07c98e0bc900bd860",
           "date": "2021-03-05T10:08:34Z",
           "total": 23.94
+        },
+        {
+          "transactionNumber": "5d01efb00884fa0690904ea7",
+          "date": "2021-06-13T05:27:49Z",
+          "total": 51.98
+        },
+        {
+          "transactionNumber": "5d01efb0acc8c75f2eec0a0a",
+          "date": "2021-06-17T06:55:19Z",
+          "total": 120.89
+        },
+        {
+          "transactionNumber": "5d01efb0efdac45d3f6d760a",
+          "date": "2021-06-20T04:00:11Z",
+          "total": 87.03
+        },
+        {
+          "transactionNumber": "5d01efb01c48b119e5729c47",
+          "date": "2021-06-22T06:24:02Z",
+          "total": 206.83
+        },
+        {
+          "transactionNumber": "5d01efb07c98e0bc900bd860",
+          "date": "2021-08-05T10:08:34Z",
+          "total": 201.23
         }
       ]
     },
@@ -1900,6 +2850,31 @@
           "transactionNumber": "5d01efb00c96456a2c86cdfb",
           "date": "2021-03-15T07:55:53Z",
           "total": 106
+        },
+        {
+          "transactionNumber": "5d01efb0102d96a05377bf07",
+          "date": "2021-07-19T11:43:12Z",
+          "total": 85.89
+        },
+        {
+          "transactionNumber": "5d01efb018cd841135cd6901",
+          "date": "2021-06-01T08:59:29Z",
+          "total": 62.69
+        },
+        {
+          "transactionNumber": "5d01efb0ccf7939414c8005d",
+          "date": "2021-07-05T02:49:23Z",
+          "total": 241.36
+        },
+        {
+          "transactionNumber": "5d01efb074c2ca225375d630",
+          "date": "2021-06-22T01:11:47Z",
+          "total": 51.6
+        },
+        {
+          "transactionNumber": "5d01efb00c96456a2c86cdfb",
+          "date": "2021-08-15T07:55:53Z",
+          "total": 106
         }
       ]
     },
@@ -1966,6 +2941,21 @@
           "transactionNumber": "5d01efb04f0571d0068d9228",
           "date": "2021-04-15T04:50:25Z",
           "total": 177.34
+        },
+        {
+          "transactionNumber": "5d01efb00cdf23c95dadc526",
+          "date": "2021-06-30T07:12:56Z",
+          "total": 121.34
+        },
+        {
+          "transactionNumber": "5d01efb0760aeca65d93e0bc",
+          "date": "2021-07-04T07:55:03Z",
+          "total": 214.6
+        },
+        {
+          "transactionNumber": "5d01efb04f0571d0068d9228",
+          "date": "2021-08-15T04:50:25Z",
+          "total": 177.34
         }
       ]
     },
@@ -2017,6 +3007,31 @@
           "transactionNumber": "5d01efb03fa9f11121cbe19b",
           "date": "2021-03-04T01:55:12Z",
           "total": 155.37
+        },
+        {
+          "transactionNumber": "5d01efb0f96395a63387970e",
+          "date": "2021-06-07T12:12:13Z",
+          "total": 198.88
+        },
+        {
+          "transactionNumber": "5d01efb05fa56e5bb6ab186d",
+          "date": "2021-06-18T08:03:50Z",
+          "total": 100.11
+        },
+        {
+          "transactionNumber": "5d01efb063005186bfca34ed",
+          "date": "2021-07-02T04:28:36Z",
+          "total": 88.98
+        },
+        {
+          "transactionNumber": "5d01efb01f499b2b812cca91",
+          "date": "2021-06-21T09:19:30Z",
+          "total": 374.32
+        },
+        {
+          "transactionNumber": "5d01efb03fa9f11121cbe19b",
+          "date": "2021-08-04T01:55:12Z",
+          "total": 78.90
         }
       ]
     },
@@ -2078,6 +3093,46 @@
           "transactionNumber": "5d01efb0ee2295a371563d47",
           "date": "2021-05-22T06:15:21Z",
           "total": 71.54
+        },
+        {
+          "transactionNumber": "5d01efb0ae1a15f825dd11cc",
+          "date": "2021-08-21T07:14:51Z",
+          "total": 67.89
+        },
+        {
+          "transactionNumber": "5d01efb0f50849a6d3d826da",
+          "date": "2021-08-20T06:26:25Z",
+          "total": 99.43
+        },
+        {
+          "transactionNumber": "5d01efb0cd3ce8176267eb75",
+          "date": "2021-08-09T12:15:31Z",
+          "total": 32.89
+        },
+        {
+          "transactionNumber": "5d01efb04d13aa92e8d15d7b",
+          "date": "2021-06-30T03:30:33Z",
+          "total": 245.32
+        },
+        {
+          "transactionNumber": "5d01efb05e121045d6a0b90d",
+          "date": "2021-07-04T06:06:35Z",
+          "total": 59.32
+        },
+        {
+          "transactionNumber": "5d01efb0b3a8e194796764b3",
+          "date": "2021-06-19T07:41:05Z",
+          "total": 19.22
+        },
+        {
+          "transactionNumber": "5d01efb04b8abc34ac7ad081",
+          "date": "2021-07-01T12:46:30Z",
+          "total": 78.99
+        },
+        {
+          "transactionNumber": "5d01efb0ee2295a371563d47",
+          "date": "2021-07-22T06:15:21Z",
+          "total": 144.89
         }
       ]
     },
@@ -2104,6 +3159,16 @@
           "transactionNumber": "5d01efb0943dff97f7e9c5a8",
           "date": "2021-04-19T09:26:47Z",
           "total": 112.87
+        },
+        {
+          "transactionNumber": "5d01efb0146bdfd6caf12d8e",
+          "date": "2021-07-30T08:57:36Z",
+          "total": 55.89
+        },
+        {
+          "transactionNumber": "5d01efb0943dff97f7e9c5a8",
+          "date": "2021-08-19T09:26:47Z",
+          "total": 144.89
         }
       ]
     },
@@ -2170,6 +3235,16 @@
           "transactionNumber": "5d01efb09af8affdef29e76f",
           "date": "2021-05-26T05:09:29Z",
           "total": 12.42
+        },
+        {
+          "transactionNumber": "5d01efb03242de33851f6aa9",
+          "date": "2021-07-02T11:27:33Z",
+          "total": 99.78
+        },
+        {
+          "transactionNumber": "5d01efb09af8affdef29e76f",
+          "date": "2021-07-26T05:09:29Z",
+          "total": 200.90
         }
       ]
     },
@@ -2236,6 +3311,26 @@
           "transactionNumber": "5d01efb0abab0ccd1d9d4748",
           "date": "2021-04-26T11:23:35Z",
           "total": 63.93
+        },
+        {
+          "transactionNumber": "5d01efb053722388be5d8715",
+          "date": "2021-06-06T04:13:21Z",
+          "total": 111.11
+        },
+        {
+          "transactionNumber": "5d01efb0c35399510f613de1",
+          "date": "2021-08-26T03:04:58Z",
+          "total": 88.99
+        },
+        {
+          "transactionNumber": "5d01efb04ca5067c25c2136d",
+          "date": "2021-07-09T01:57:31Z",
+          "total": 128.82
+        },
+        {
+          "transactionNumber": "5d01efb0abab0ccd1d9d4748",
+          "date": "2021-07-26T11:23:35Z",
+          "total": 71.89
         }
       ]
     },
@@ -2297,6 +3392,31 @@
           "transactionNumber": "5d01efb018e596b2d4cb5e0f",
           "date": "2021-05-02T01:12:38Z",
           "total": 240.85
+        },
+        {
+          "transactionNumber": "5d01efb0c7813fb738bb3e14",
+          "date": "2021-07-25T01:13:22Z",
+          "total": 89.98
+        },
+        {
+          "transactionNumber": "5d01efb0c9a4bd095a502bf3",
+          "date": "2021-07-03T11:51:24Z",
+          "total": 133.89
+        },
+        {
+          "transactionNumber": "5d01efb04140efdf48d14cce",
+          "date": "2021-08-16T10:57:58Z",
+          "total": 88.98
+        },
+        {
+          "transactionNumber": "5d01efb0000d4216f4a41946",
+          "date": "2021-08-09T03:47:00Z",
+          "total": 99.08
+        },
+        {
+          "transactionNumber": "5d01efb018e596b2d4cb5e0f",
+          "date": "2021-08-02T01:12:38Z",
+          "total": 343.21
         }
       ]
     }
