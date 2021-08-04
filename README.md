@@ -12,4 +12,4 @@ A customer receives 2 points for every dollar spent over $100 in each transactio
 This calculation is abstracted so that different point options may be passed in.
 
 ## Demo
-View this project online at [https://derekds.com/dev/rewards-program/](https://derekds.com/dev/rewards-program/).
+View this project online at [https://derekds.com/dev/rewards-program/](https://derekds.com/dev/rewards-program-react/).
