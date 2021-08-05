@@ -13,3 +13,9 @@ This calculation is abstracted so that different point options may be passed in.
 
 ## Demo
 View this project online at [https://derekds.com/dev/rewards-table-react/](https://derekds.com/dev/rewards-table-react/).
+
+## Lighthouse Score
+
+![Lighthouse score. Performance: 99, Accessibility: 100, Best Practices: 100, SEO: 100](images/lighthouse-score.png)
+
+[View Lighthouse report](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fderekds.com%2Fdev%2Frewards-table-react%2F)
