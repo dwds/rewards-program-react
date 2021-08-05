@@ -1,5 +1,11 @@
 .root {
-  display: flex;
-  align-items: center;
   padding: 24px 48px;
+}
+
+.root h1 {
+  margin: 0;
+}
+
+.root p {
+  line-height: 1.6;
 }
