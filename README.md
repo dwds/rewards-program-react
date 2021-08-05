@@ -16,6 +16,6 @@ View this project online at [https://derekds.com/dev/rewards-table-react/](https
 
 ## Lighthouse Score
 
-![Lighthouse score. Performance: 99, Accessibility: 100, Best Practices: 100, SEO: 100](images/lighthouse-score.png)
+![Lighthouse score. Performance: 99, Accessibility: 100, Best Practices: 100, SEO: 100](images/lighthouse-scores.png)
 
 [View Lighthouse report](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fderekds.com%2Fdev%2Frewards-table-react%2F)
