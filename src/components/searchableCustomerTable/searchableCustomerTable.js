@@ -69,11 +69,9 @@ function SearchableCustomerTable({
           ? <CustomerTable
             customers={filteredCustomers}
             startMonth={new Date(inputValues.startDate)}
-            numberOfMonths={parseInt(inputValues.numberOfMonths)} />
+            numberOfMonths={Math.max(1, parseInt(inputValues.numberOfMonths)) || 1} />
           : <p>No results found.</p>
         }
-
-
       </div>
   );
 }
